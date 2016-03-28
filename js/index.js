@@ -6,6 +6,7 @@
    tl.from("#p-item-3", 0.7, {x: "+=5000", ease: Expo.easeOut}, 0.7);
    tl.from("#p-item-4", 0.7, {y: "+=5000", ease: Expo.easeOut}, 0.8);
    tl.from("#p-item-5", 0.7, {y: "+=5000", ease: Expo.easeOut}, 0.9);
+   tl.from("#p-item-6", 0.7, {x: "+=5000", ease: Expo.easeOut}, 1);
 
    $(".portfolio-item").hover(function(e) {
       TweenMax.to($(this), 0.5, {scale: 1.1});
