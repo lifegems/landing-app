@@ -66,7 +66,7 @@
 
         <!-- Page Header -->
         <div class="row">
-            <div class="col-lg-12">
+            <div id="pageTitle" class="col-lg-12">
                 <h1 class="page-header">Life Gems
                     <small>Select a project below</small>
                 </h1>
@@ -76,47 +76,47 @@
 
         <!-- Projects Row -->
         <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="https://lifegems.github.io/bible-timeline">
-                    <img class="img-responsive" src="img/bibletl.png" alt="">
-                </a>
-                <h3>
-                    <a href="https://lifegems.github.io/bible-timeline">Bible Timeline</a>
-                </h3>
-                <p>A timeline of events, lifespans, and details regarding biblical information.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="http://codepen.io/darthody/full/XdgBdK/">
-                    <img class="img-responsive" src="img/kings.png" alt="">
-                </a>
-                <h3>
-                    <a href="http://codepen.io/darthody/full/XdgBdK/">Israelite King Profile</a>
-                </h3>
-                <p>Compare king to king for the Nation of Israel. Learn their ages as they ruled, the prophets and high priests, and major events of what has occured during the reigns.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="https://darthyody.github.io">
-                    <img class="img-responsive" src="img/daniel11.png" alt="">
-                </a>
-                <h3>
-                    <a href="https://darthyody.github.io">Prophetic Kings of Daniel 11</a>
-                </h3>
-                <p>Comb through the prophecy of the kings of the North and South as seen in Daniel's vision of chapter 11 of the book bearing his name.</p>
-            </div>
+            <a href="https://lifegems.github.io/bible-timeline">
+                <div class="col-md-4 portfolio-item" id="p-item-1">
+                    <img class="img-responsive thumbnail" src="img/bibletl.png" alt="">
+                    <h3>
+                        Bible Timeline
+                    </h3>
+                    <p>A timeline of events, lifespans, and details regarding biblical information.</p>
+                </div>
+            </a>
+            <a href="http://codepen.io/darthody/full/XdgBdK/">
+                <div class="col-md-4 portfolio-item" id="p-item-2">
+                    <img class="img-responsive thumbnail" src="img/kings.png" alt="">
+                    <h3>
+                        Israelite King Profile
+                    </h3>
+                    <p>Compare king to king for the Nation of Israel. Learn their ages as they ruled, the prophets and high priests, and major events of what has occured during the reigns.</p>
+                </div>
+            </a>
+            <a href="https://darthyody.github.io">
+                <div class="col-md-4 portfolio-item" id="p-item-3">
+                    <img class="img-responsive thumbnail" src="img/daniel11.png" alt="">
+                    <h3>
+                        Prophetic Kings of Daniel 11
+                    </h3>
+                    <p>Comb through the prophecy of the kings of the North and South as seen in Daniel's vision of chapter 11 of the book bearing his name.</p>
+                </div>
+            </a>
         </div>
         <!-- /.row -->
 
         <!-- Projects Row -->
         <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="http://codepen.io/darthody/full/oxWgdj/">
-                    <img class="img-responsive" src="img/lastdays.png" alt="">
-                </a>
-                <h3>
-                    <a href="http://codepen.io/darthody/full/oxWgdj/">Prophecies of the last days</a>
-                </h3>
-                <p>See all of the prophecies pertaining to 1914 and onward. View how Jehovah has prepared his people for a new millenium of kingly reign.</p>
-            </div>
+            <a href="http://codepen.io/darthody/full/oxWgdj/">
+                <div class="col-md-4 portfolio-item" id="p-item-4">
+                    <img class="img-responsive thumbnail" src="img/lastdays.png" alt="">
+                    <h3>
+                        Prophecies of the last days
+                    </h3>
+                    <p>See all of the prophecies pertaining to 1914 and onward. View how Jehovah has prepared his people for a new millenium of kingly reign.</p>
+                </div>
+            </a>
         </div>
         <!-- /.row -->
         <hr>
@@ -171,6 +171,10 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- My scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 
