@@ -12,7 +12,4 @@
    }, function(e) {
       TweenMax.to($(this), 0.5, {scale: 1});
    });
-   $(".portfolio-item").on('click', function(e) {
-      TweenMax.to($(this), 0.3, {scale: 0.5, x: "+=500", y: "-=500"});
-   });
 })();
