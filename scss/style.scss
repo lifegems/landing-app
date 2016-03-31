@@ -1,0 +1,155 @@
+@mixin device($device) {
+   @if $device == phone {
+      @media screen and (max-width: 767px) {
+         @content;
+      }
+   }
+   @else if $device == tablet {
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+         @content;
+      }
+   }
+   @else if $device == desktop {
+      @media screen and (min-width: 1024px) {
+         @content;
+      }
+   }
+}
+
+.bgd-image {
+   background: url(https://assetsnffrgf-a.akamaihd.net/assets/l/my/my_EF/37.jpg) no-repeat no-repeat fixed;
+   background-size: cover;
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   @include device(phone) {
+      height: 80%;
+   }
+   @include device(tablet) {
+      height: 60%;
+   }
+}
+
+html, body {
+   height: 100%;
+   background-color: #fff;
+   font-family: "Comic Sans MS", cursive, sans-serif;
+   /*@include device(phone) { background-color: #00f;}
+   @include device(tablet) { background-color: #0f0;}
+   @include device(desktop) { background-color: #f00;}*/
+}
+
+#temple-area {
+   width: 100%;
+   height: auto !important;
+   background-color: #fff;
+   position: fixed;
+
+   img {
+      @include device(phone) {
+         position: fixed;
+         left: 2vw;
+         width: 10vw;
+         bottom: 0px;
+      }
+      @include device(tablet) {
+         position: fixed;
+         left: 6vw;
+         width: 20vw;
+         bottom: 0px;
+      }
+      @include device(desktop) {
+         position: absolute;
+         top: 40vh;
+         left: 40vw;
+         width: 10vw;
+      }
+   }
+}
+
+.thought-bubble {
+   @include device(phone) {
+      left: 15%;
+      width: 80%;
+      font-size: 1.7em;
+      position: fixed;
+      bottom: 0px;
+   }
+   @include device(tablet) {
+      font-size: 2em;
+      position: fixed;
+      bottom: 0px;
+      left: 25%;
+      height: 300px;
+      width: 65vw;
+   }
+   @include device(desktop) {
+      position:absolute;
+      top: 40vh;
+      width: 15vw;
+      left: 51vw;
+   }
+   font-size: 1.25em;
+   padding:15px;
+   margin:1em 0 1em;
+   border:5px solid #444;
+   color:#333;
+   background:#fff;
+   -webkit-border-radius:10px;
+   -moz-border-radius:10px;
+   border-radius:10px;
+
+   .nextphrase {
+      cursor: pointer;
+
+      @include device(tablet) {
+         position: fixed;
+         bottom: 40px;
+      }
+   }
+
+   @mixin leftArrow() {
+      &:after {
+         content:"";
+         position:absolute;
+         bottom:-13px;
+         left:47px;
+         border-width:13px 13px 0;
+         border-style:solid;
+         border-color:#fff transparent;
+         display:block;
+         width:0;
+      }
+      &:before {
+         content:"";
+         position:absolute;
+         bottom:-20px;
+         left:40px;
+         border-width:20px 20px 0;
+         border-style:solid;
+         border-color:#444 transparent;
+         display:block;
+         width:0;
+      }
+      &.left {
+         margin-left:30px;
+         &:before {
+            top:40px;
+            bottom:auto;
+            left:-30px;
+            border-width:15px 30px 15px 0;
+            border-color:transparent #444;
+         }
+         &:after {
+           top:46px;
+           bottom:auto;
+           left:-21px;
+           border-width:9px 21px 9px 0;
+           border-color:transparent #fff;
+         }
+      }
+   }
+
+   @include device(tablet) { @include leftArrow(); }
+   @include device(desktop) { @include leftArrow(); }
+}
