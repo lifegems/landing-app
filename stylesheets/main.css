@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none; }
+
+html, body {
+  font-family: "Helvetica Neue", Helvetica, "Droid Sans", Arial, "Arial Unicode", "Arial Unicode MS", sans-serif;
+  background-color: #fff;
+  width: 100%; }
+  @media screen and (max-width: 767px) {
+    html, body {
+      height: auto; } }
+
+h1, h2, h3, h4, h5 {
+  color: #111; }
+
+a {
+  color: #799fcc;
+  text-decoration: none; }
+  a:active, a:clicked {
+    text-decoration: none; }
+
+.mainmenu {
+  z-index: 100;
+  height: auto;
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  border-bottom: 2px solid #eae9e6; }
+  @media screen and (max-width: 767px) {
+    .mainmenu {
+      border-bottom: 2px solid #fff; } }
+  .mainmenu--title {
+    text-align: center;
+    margin-top: 6px; }
+    @media screen and (max-width: 767px) {
+      .mainmenu--title {
+        width: 100%;
+        padding: 10px;
+        border-bottom: 2px solid #eae9e6; } }
+  .mainmenu--expand {
+    width: 20%;
+    display: none;
+    padding: 10px;
+    float: left;
+    text-align: center;
+    background-color: #eae9e6; }
+    .mainmenu--expand:hover {
+      cursor: pointer; }
+    @media screen and (max-width: 767px) {
+      .mainmenu--expand {
+        margin: 0px;
+        display: block; } }
+  .mainmenu--item {
+    margin: 0px;
+    display: block;
+    float: left;
+    list-style: none;
+    width: 80px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    padding: 4px;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1em;
+    font-variant-caps: all-small-caps; }
+    @media screen and (max-width: 767px) {
+      .mainmenu--item {
+        width: 100%;
+        padding: 6px;
+        border: 2px solid #eae9e6; }
+        .mainmenu--item:hover {
+          border: 2px solid #d9dad8; } }
+    .mainmenu--item:hover {
+      border: 1px solid #d9dad8;
+      cursor: pointer; }
+    .mainmenu--item.is-active {
+      background-color: #d9dad8;
+      color: #111;
+      font-weight: bold; }
+    .mainmenu--item.is-hidden {
+      display: none; }
+
+.content {
+  margin: 10%;
+  float: left;
+  display: block;
+  width: 80%; }
+  @media screen and (max-width: 767px) {
+    .content {
+      width: 100%;
+      margin: 95px 0px; } }
+
+.heading {
+  text-align: center;
+  background-color: #fff;
+  color: #7a7f79; }
+  @media screen and (max-width: 767px) {
+    .heading {
+      display: block;
+      width: 100%;
+      position: fixed; } }
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  background-color: #fff;
+  border-top: 2px solid #eae9e6;
+  height: 40px;
+  width: 100%; }
+
+.policy {
+  color: #111;
+  text-align: center;
+  padding: 10px; }
+
+.timeline--dateline {
+  display: flex;
+  position: fixed;
+  bottom: 40px;
+  width: 100%;
+  padding-bottom: 1vh;
+  justify-content: space-around; }
+
+.date {
+  color: #7a7f79; }
+  .date.is-left, .date.is-right {
+    padding-top: 5px; }
+  .date.is-center {
+    font-size: 1.5em; }
+  .date:hover {
+    color: #d9dad8;
+    cursor: pointer; }
+
+.portfolio {
+  display: block;
+  width: 90vw;
+  margin: 0 auto; }
+  @media screen and (max-width: 767px) {
+    .portfolio {
+      display: block;
+      width: 100%;
+      margin: 30px auto;
+      padding: 0.1px; } }
+  .portfolio--item {
+    display: block;
+    margin: 10px;
+    float: left;
+    width: 20vw;
+    height: 45vh;
+    overflow: hidden;
+    border: 1px solid #eae9e6;
+    border-radius: 3px;
+    padding: 25px;
+    box-shadow: 5px 5px 5px 0px #d9dad8; }
+    @media screen and (max-width: 767px) {
+      .portfolio--item {
+        float: none;
+        margin: 15px auto;
+        width: 70vw;
+        height: 50vh; } }
+    .portfolio--item--title {
+      border-top: 1px solid #eae9e6;
+      padding: 5px;
+      margin-top: 10%;
+      text-align: center; }
+    .portfolio--item--desc {
+      color: #111;
+      text-align: justify; }
+    .portfolio--item--img {
+      margin: 0 auto;
+      display: block;
+      width: 95%; }
+    .portfolio--item:hover {
+      box-shadow: 10px 10px 5px 0px #d9dad8; }
+
+/*# sourceMappingURL=main.css.map */

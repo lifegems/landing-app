@@ -1,216 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Life Gems</title>
-    <link rel="icon" type="image/png" href="img/favicon.ico">
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/3-col-portfolio.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-<!--     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            Brand and toggle get grouped for better mobile display
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
-            Collect the nav links, forms, and other content for toggling
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            /.navbar-collapse
-        </div>
-        /.container
-    </nav> -->
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <!-- Page Header -->
-        <div class="row">
-            <div id="pageTitle" class="col-lg-12">
-                <h1 class="page-header">Life Gems
-                    <small>Select a project below</small>
-                </h1>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <a class="link-item" href="https://lifegems.github.io/bible-timeline">
-                <div class="col-sm-6 col-md-4 portfolio-item" id="p-item-1">
-                    <img class="img-responsive thumbnail" src="img/bibletl.png" alt="">
-                    <h3>
-                        Bible Timeline
-                    </h3>
-                    <p>A timeline of events, lifespans, and details regarding biblical information.</p>
-                </div>
+<html>
+   <head>
+      <title>Life Gems. God's word is alive.</title>
+      <link rel="icon" type="image/png" href="assets/favicon.ico">
+      <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <header>
+         <nav class="mainmenu">
+            <h1 class="mainmenu--title">Life Gems</h1>
+            <ul>
+               <a href="index.html"><li class="mainmenu--item is-active">Home</li></a>
+               <a href="timeline.html"><li class="mainmenu--item">Timeline</li></a>
+               <a href="#"><li class="mainmenu--item">Maps</li></a>
+               <a href="#"><li class="mainmenu--item">Plagues</li></a>
+            </ul>
+            <div class="mainmenu--expand">SHOW</div>
+         </nav>
+      </header>
+      
+      <div class="content">
+         
+         <h2 class="heading">Choose a gem</h2>
+      
+         <div class="portfolio">
+            <a href="#" class="portfolio--item">
+               <img class="portfolio--item--img" src="assets/img/timeline.png">
+               <h3 class="portfolio--item--title">Bible Timeline</h3>
+               <p class="portfolio--item--desc">A timeline including events, lifespans, prophecies, and more. See the relation between the contents of the bible.</p>
             </a>
-            <a class="link-item" href="https://lifegems.github.io/plagues">
-                <div class="col-sm-6 col-md-4 portfolio-item" id="p-item-2">
-                    <img class="img-responsive thumbnail" src="img/plagues.png" alt="">
-                    <h3>
-                        Plagues of Egypt
-                    </h3>
-                    <p>Learn about and see the 10 plagues of Egypt. Which gods Jehovah proved false and how he proclaimed his sovereigny!</p>
-                </div>
+            <a href="#" class="portfolio--item">
+               <img class="portfolio--item--img" src="assets/img/plagues.png">
+               <h3 class="portfolio--item--title">Plagues of Egypt</h3>
+               <p class="portfolio--item--desc">Learn about the ten plagues of Egypt. See the gods that were defamed and who was involved.</p>
             </a>
-            <a class="link-item" href="https://lifegems.github.io/daniel11">
-                <div class="col-sm-6 col-md-4 portfolio-item" id="p-item-3">
-                    <img class="img-responsive thumbnail" src="img/daniel11.png" alt="">
-                    <h3>
-                        Prophetic Kings of Daniel 11
-                    </h3>
-                    <p>Comb through the prophecy of the kings of the North and South as seen in Daniel's vision of chapter 11 of the book bearing his name. Understand why a king is mentioned and what happened historically to fulfill prophecy.</p>
-                </div>
+            <a href="#" class="portfolio--item">
+               <img class="portfolio--item--img" src="assets/img/aaron.png">
+               <h3 class="portfolio--item--title">Temple Offerings</h3>
+               <p class="portfolio--item--desc">Learn about the various kings of sacrifices that were made by the priests serving in the tabernacle.</p>
             </a>
-            <a class="link-item" href="http://codepen.io/darthody/full/oxWgdj/">
-                <div class="col-sm-6 col-md-4 portfolio-item" id="p-item-4">
-                    <img class="img-responsive thumbnail" src="img/lastdays.png" alt="">
-                    <h3>
-                        Prophecies of the last days
-                    </h3>
-                    <p>See all of the prophecies pertaining to 1914 and onward. View how Jehovah has prepared his people for a new millenium of kingly reign. </p>
-                </div>
-            </a>
-            <a class="link-item" href="https://lifegems.github.io/people">
-                <div class="col-sm-6 col-md-4 portfolio-item" id="p-item-5">
-                    <img class="img-responsive thumbnail" src="img/people.png" alt="">
-                    <h3>
-                        People of the Bible
-                    </h3>
-                    <p>See profiles of individuals in the scriptures. Learn about where they lived, when they lived, and what they did. Who have you wanted to get to know better?</p>
-                </div>
-            </a>
-            <a class="link-item" href="https://darthyody.github.io/iosWebapp/myJW/index.html">
-                <div class="col-sm-6 col-md-4 portfolio-item" id="p-item-6">
-                    <img class="img-responsive thumbnail" src="img/biblereading.png" alt="">
-                    <h3>
-                        Read the Bible Daily
-                    </h3>
-                    <p>Keep track of your daily bible reading with this schedule. Read the bible in a year. You can also see how far ahead or behind you are.</p>
-                </div>
-            </a>
-            <a class="link-item" href="http://codepen.io/darthody/full/XdgBdK/">
-                <div class="col-sm-6 col-md-4 portfolio-item" id="p-item-7">
-                    <img class="img-responsive thumbnail" src="img/kings.png" alt="">
-                    <h3>
-                        Israelite Kings
-                    </h3>
-                    <p>Compare king to king for the Nation of Israel. Learn their ages as they ruled, the prophets and high priests, and major events of what has occured during the reigns.</p>
-                </div>
-            </a>
-            <a class="link-item" href="offerings.html">
-                <div class="col-sm-6 col-md-4 portfolio-item" id="p-item-8">
-                    <img class="img-responsive thumbnail" src="img/aaron.png" alt="">
-                    <h3>
-                        Tabernacle Offerings
-                    </h3>
-                    <p>Learn about the various types of sacrifices made at the tabernacle and later the temple.</p>
-                </div>
-            </a>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-        <!-- /.row -->
-        <hr>
-
-        <!-- Pagination -->
-<!--         <div class="row text-center">
-            <div class="col-lg-12">
-                <ul class="pagination">
-                    <li>
-                        <a href="#">&laquo;</a>
-                    </li>
-                    <li class="active">
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">&raquo;</a>
-                    </li>
-                </ul>
-            </div>
-        </div> -->
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Lifegems 2016</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
-
-    </div>
-    <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- My scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
-    <script src="js/index.js"></script>
-
-</body>
-
+         </div>
+         
+      </div>
+      
+      <footer>
+         <p class="policy">Lifegems. Copyright (c) 2016</p>
+      </footer>
+      
+      <!-- JS code -->
+      <script src="js/lib/jquery-2.2.2.js"></script>
+      <script src="js/index.js"></script>
+   </body>      
 </html>

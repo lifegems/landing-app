@@ -1,0 +1,34 @@
+$navy: navy;
+$blue: #799fcc;
+$aqua: aqua;
+$darkgray: darkgray;
+$white: #fff;
+$ltgray: #eae9e6;
+$mdgray: #d9dad8;
+$dkgray: #7a7f79;
+$black: #111;
+
+html, body {
+   font-family: "Helvetica Neue", Helvetica, "Droid Sans", Arial, "Arial Unicode", "Arial Unicode MS", sans-serif;
+   background-color: $white;
+   width: 100%;
+   
+   @include setDeviceStyle(phone) {
+      height: auto;
+   }
+}
+
+
+h1, h2, h3, h4, h5 {
+   color: $black;
+}
+
+a {
+   color: $blue;
+   text-decoration: none;
+   
+   // states
+   &:active, &:clicked {
+      text-decoration: none;
+   }
+}
