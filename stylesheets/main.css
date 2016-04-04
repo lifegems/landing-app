@@ -2083,7 +2083,10 @@
 html, body {
   font-family: "Helvetica Neue", Helvetica, "Droid Sans", Arial, "Arial Unicode", "Arial Unicode MS", sans-serif;
   background-color: #fff;
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
   @media screen and (max-width: 767px) {
     html, body {
       height: auto; } }
@@ -2162,8 +2165,7 @@ a {
 
 .content {
   margin: 10%;
-  float: left;
-  display: block;
+  flex: 1;
   width: 80%; }
   @media screen and (max-width: 767px) {
     .content {
@@ -2183,15 +2185,10 @@ a {
       padding: 3px; } }
 
 footer {
-  position: fixed;
-  bottom: 0px;
   background-color: #fff;
   border-top: 2px solid #eae9e6;
   height: 40px;
   width: 100%; }
-  @media screen and (max-width: 767px) {
-    footer {
-      position: relative; } }
 
 .policy {
   color: #111;

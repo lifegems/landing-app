@@ -86,8 +86,7 @@
 
 .content {
    margin: 10%;
-   float: left;
-   display: block;
+   flex: 1;
    width: 80%;
 
    @include setDeviceStyle(phone) {
@@ -111,17 +110,10 @@
 }
 
 footer {
-   position: fixed;
-   bottom: 0px;
    background-color: $white;
    border-top: 2px solid $ltgray;
    height: 40px;
    width: 100%;
-
-   @include setDeviceStyle(phone) {
-
-      position: relative;
-   }
 }
 
 .policy {
