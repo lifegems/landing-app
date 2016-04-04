@@ -2170,16 +2170,18 @@ a {
   @media screen and (max-width: 767px) {
     .content {
       width: 100%;
-      margin: 107px 0px 0px 0px; } }
+      margin: 107px 0px 0px 0px;
+      overflow: scroll; } }
 
 .heading {
   text-align: center;
   background-color: #fff;
+  width: 100%;
+  max-width: 100%;
   color: #7a7f79; }
   @media screen and (max-width: 767px) {
     .heading {
       display: block;
-      width: 100%;
       position: fixed;
       margin: 0px;
       padding: 3px; } }
@@ -2189,28 +2191,50 @@ footer {
   border-top: 2px solid #eae9e6;
   height: 40px;
   width: 100%; }
+  @media screen and (max-width: 767px) {
+    footer {
+      /*display: none;*/ } }
 
 .policy {
   color: #111;
   text-align: center;
   padding: 10px; }
 
-.timeline--dateline {
-  display: flex;
-  position: fixed;
-  bottom: 40px;
-  width: 100%;
-  padding-bottom: 1vh;
-  justify-content: space-around; }
+.timeline {
+  margin-top: 5px;
+  border-collapse: collapse;
+  table-layout: fixed; }
+  .timeline--dateline {
+    bottom: 40px;
+    padding-bottom: 1vh;
+    vertical-align: bottom; }
+
+.events--row {
+  border-bottom: 3px solid #fff; }
+.events--event {
+  background-color: #eae9e6;
+  width: 50%;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  padding: 10px; }
+  .events--event:hover {
+    background-color: #d9dad8;
+    cursor: pointer; }
+.events--content {
+  display: none;
+  color: #7a7f79; }
 
 .date {
   color: #7a7f79; }
-  .date.is-left, .date.is-right {
-    padding-top: 5px; }
-  .date.is-center {
-    font-size: 1.5em; }
   .date:hover {
     cursor: pointer; }
+  .date--span {
+    width: 33vw; }
+    @media screen and (max-width: 767px) {
+      .date--span {
+        width: 100vw;
+        font-size: 30px;
+        /*visibility: hidden;*/ } }
 
 .portfolio {
   display: block;

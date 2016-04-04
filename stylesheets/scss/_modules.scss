@@ -92,17 +92,19 @@
    @include setDeviceStyle(phone) {
       width: 100%;
       margin: 107px 0px 0px 0px;
+      overflow: scroll;
    }
 }
 
 .heading {
    text-align: center;
    background-color: $white;
+   width: 100%;
+   max-width: 100%;
    color: $dkgray;
 
    @include setDeviceStyle(phone) {
       display: block;
-      width: 100%;
       position: fixed;
       margin: 0px;
       padding: 3px;
@@ -114,6 +116,10 @@ footer {
    border-top: 2px solid $ltgray;
    height: 40px;
    width: 100%;
+
+   @include setDeviceStyle(phone) {
+      /*display: none;*/
+   }
 }
 
 .policy {
@@ -123,30 +129,54 @@ footer {
 }
 
 .timeline {
-
+   margin-top: 5px;
+   border-collapse: collapse;
+   table-layout: fixed;
    &--dateline {
-      display: flex;
-      position: fixed;
       bottom: 40px;
-      width: 100%;
       padding-bottom: 1vh;
-      justify-content: space-around;
+      vertical-align: bottom;
+   }
+}
+
+.events {
+   &--row {
+      border-bottom: 3px solid #fff;
+   }
+   &--event {
+      background-color: $ltgray;
+      width: 50%;
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+      padding: 10px;
+
+      &:hover {
+         background-color: $mdgray;
+         cursor: pointer;
+      }
+   }
+
+   &--content {
+      display: none;
+      color: $dkgray;
    }
 }
 
 .date {
    color: $dkgray;
 
-   &.is-left, &.is-right {
-      padding-top:5px;
-   }
-
-   &.is-center {
-      font-size: 1.5em;
-   }
-
    &:hover {
       cursor: pointer;
+   }
+
+   &--span {
+      width: 33vw;
+
+      @include setDeviceStyle(phone) {
+         width: 100vw;
+         font-size: 30px;
+         /*visibility: hidden;*/
+      }
    }
 }
 

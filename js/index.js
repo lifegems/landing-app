@@ -26,4 +26,89 @@
    if ( $('.mainmenu--expand').css('display') === 'block') {
       $(".mainmenu--item").addClass("is-hidden");
    }
+
+   function createEvent(intID, strColor) {
+         var tag = "tag_" + intID;
+         var $newevent = $("<td></td>", {id: tag, class: "events--event"});
+         var date = "event " + intID;
+         $newevent.text(date);
+
+         $newevent.css('backgroundColor', strColor);
+
+         var tagcontent = tag + "_content";
+         var $content = $("<div></div>", {class: "events--content", id: tagcontent});
+         $content.text("This is a bunch of text that can appear.");
+         $newevent.append($content);
+         if (intID === 3) {
+            $newevent.attr('colspan', 2.5);
+         }
+
+         $newevent.click(function(e) {
+            var tag = "#" + $(this).attr('id') + "_content";
+
+            if (($(tag).css('display') === "none") === true) {
+               $(tag).show();
+            } else {
+               $(tag).hide();
+            }
+         });
+
+         // $eventrow.append($newevent);
+         return $newevent;
+   }
+
+   function getEventRow(strColor) {
+      var $eventrow = $("<tr></tr>", {class: "events--row"});
+      for (var i = 0; i < 5; i++) {
+         var $newevent = createEvent(i, strColor);
+         $eventrow.append($newevent);
+      };
+      return $eventrow;
+   }
+
+   $("#searchTimeline").keyup(function(e) {
+      var regex = new RegExp($("#searchTimeline").val(), "i");
+      var event = $(".events--event");
+      event.each(function(index) {
+         if ($(this).html().search(regex) != -1) {
+            $(this).show();
+         } else {
+            $(this).hide();
+         }
+      });
+   });
+
+   function loadTimeline() {
+      var $tl = $(".timeline");
+      if ($tl.length === 1) {
+         // build date line
+         var $dates = $("<tfoot></tfoot>", {class: ".timeline--dateline"});
+         var $line = $("<tr></tr>");
+         for (var i = 0; i < 15; i++) {
+            var $footer = $("<th></th>", {class: "date"})
+            var $date = $("<div></div>", {class: "date--span"});
+            var date = 4027 - i;
+            $date.text(date);
+            $footer.append($date);
+
+            $line.append($footer);
+         }
+         $dates.append($line);
+
+         // build events
+         var $events = $("<tbody></tbody", {class: "events"});
+            // each event type gets it's own row
+         var colors = ["#AFC9D8", "#E8F7FF", "#BAD5E5", "#B6CBEF"];
+         for (var i = 0; i < 15; i++) {
+            var $eventsrow = getEventRow(colors[i % 4]);
+            $events.append($eventsrow);
+         }
+
+         // add to DOM
+         $tl.append($events);
+         $tl.append($dates)
+      }
+   }
+
+   loadTimeline();
 })();
