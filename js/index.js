@@ -57,7 +57,7 @@
          return $newevent;
    }
 
-   function getEventRow(strColor) {
+   function getEventRow(strColor, intRowID) {
       var $eventrow = $("<tr></tr>", {class: "events--row"});
       for (var i = 0; i < 5; i++) {
          var $newevent = createEvent(i, strColor);
@@ -100,7 +100,7 @@
             // each event type gets it's own row
          var colors = ["#AFC9D8", "#E8F7FF", "#BAD5E5", "#B6CBEF"];
          for (var i = 0; i < 15; i++) {
-            var $eventsrow = getEventRow(colors[i % 4]);
+            var $eventsrow = getEventRow(colors[i % 4], i);
             $events.append($eventsrow);
          }
 

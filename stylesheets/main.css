@@ -2225,6 +2225,7 @@ footer {
   color: #7a7f79; }
 
 .date {
+  background-color: white;
   color: #7a7f79; }
   .date:hover {
     cursor: pointer; }
