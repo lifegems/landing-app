@@ -112,8 +112,16 @@ var Timeline = (function Timeline() {
     */
    $('.toolbar--zoom--in').on('click', function(e) {
       var width = $('.date--span').css('width');
-      var width = width.substr(0, width.length - 2);
+      width = width.substr(0, width.length - 2);
       $('.date--span').css('width', width * 1.5);
+
+      var padding = $('.events--event').css('padding');
+      padding = padding.substr(0, padding.length - 2);
+      $('.events--event').css('padding', padding * 1.5);
+
+      var fontSize = $('.events--event').css('font-size');
+      fontSize = fontSize.substr(0, fontSize.length - 2);
+      $('.events--event').css('font-size', fontSize * 1.5);
    });
 
    /**
@@ -121,8 +129,16 @@ var Timeline = (function Timeline() {
     */
    $('.toolbar--zoom--out').on('click', function(e) {
       var width = $('.date--span').css('width');
-      var width = width.substr(0, width.length - 2);
+      width = width.substr(0, width.length - 2);
       $('.date--span').css('width', width * 0.67);
+
+      var padding = $('.events--event').css('padding');
+      padding = padding.substr(0, padding.length - 2);
+      $('.events--event').css('padding', padding * 0.67);
+
+      var fontSize = $('.events--event').css('font-size');
+      fontSize = fontSize.substr(0, fontSize.length - 2);
+      $('.events--event').css('font-size', fontSize * 0.67);
    });
 
    /**

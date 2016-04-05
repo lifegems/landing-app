@@ -77,26 +77,6 @@
          width: 95%;
       }
    }
-
-   &--search {
-      font-size: 1.7em;
-      color: $dkgray;
-      display: inline;
-      float: left;
-      border: 0.5px solid $ltgray;
-      padding: 5px 10px;
-   }
-   &--searchbox {
-      display: none;
-   }
-   &--year {
-      font-size: 1.7em;
-      color: $dkgray;
-      display: inline;
-      float: left;
-      border: 0.5px solid $ltgray;
-      padding: 5px 10px;
-   }
    &--selectyear {
       width: 100%;
       display: none;
@@ -110,6 +90,26 @@
       border-radius: 3px;
       box-shadow: 5px 5px 5px 0px $dkgray;
       text-align: center;
+   }
+   &--searchbox {
+      display: none;
+   }
+
+   &--search {
+      font-size: 1.7em;
+      color: $dkgray;
+      display: inline;
+      float: left;
+      border: 0.5px solid $ltgray;
+      padding: 5px 10px;
+   }
+   &--year {
+      font-size: 1.7em;
+      color: $dkgray;
+      display: inline;
+      float: left;
+      border: 0.5px solid $ltgray;
+      padding: 5px 10px;
    }
    &--zoom--in, &--zoom--out {
       font-size: 1.7em;
