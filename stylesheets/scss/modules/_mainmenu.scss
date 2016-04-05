@@ -1,6 +1,5 @@
 .mainmenu {
    z-index: 100;
-   height: 50px;
    width: 100%;
    position: fixed;
    background-color: $white;
@@ -9,6 +8,7 @@
 
    @include setDeviceStyle(phone) {
       border-bottom: none;
+      height: 50px;
    }
 
    &--title {
