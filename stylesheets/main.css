@@ -2119,9 +2119,10 @@ a {
         padding: 10px;
         border-bottom: 2px solid #eae9e6; } }
   .mainmenu--expand {
-    width: 10%;
+    font-size: 1.7em;
+    line-height: 1.2em;
+    width: 8%;
     display: none;
-    padding: 10px;
     float: left;
     text-align: center;
     background-color: #eae9e6; }
@@ -2134,7 +2135,7 @@ a {
         position: fixed;
         left: 0px;
         top: 0px;
-        padding: 12px; } }
+        padding: 8px 10px; } }
   .mainmenu--item {
     margin: 0px;
     display: block;

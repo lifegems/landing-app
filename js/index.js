@@ -5,11 +5,11 @@ var Main = (function Main() {
 
    $(".mainmenu--expand").click(function(e) {
       if (isMenuExpanded === false) {
-         $(this).html("<i class='fa fa-chevron-up fa-2x'></i>");
+         $(this).html("<i class='fa fa-chevron-up'></i>");
          $(".mainmenu--item").removeClass("is-hidden");
          isMenuExpanded = true;
       } else {
-         $(this).html("<i class='fa fa-bars fa-2x'></i>");
+         $(this).html("<i class='fa fa-bars'></i>");
          $(".mainmenu--item").addClass("is-hidden");
          isMenuExpanded = false;
       }
