@@ -86,6 +86,18 @@ var Main = (function Main() {
       }
    });
 
+   $('.toolbar--zoom--in').on('click', function(e) {
+      var width = $('.date--span').css('width');
+      var width = width.substr(0, width.length - 2);
+      $('.date--span').css('width', width * 1.5);
+   });
+
+   $('.toolbar--zoom--out').on('click', function(e) {
+      var width = $('.date--span').css('width');
+      var width = width.substr(0, width.length - 2);
+      $('.date--span').css('width', width * 0.67);
+   });
+
    $('.toolbar--selectyear').on('change', function(e) {
       $('.toolbar--selectyear').css('display', 'none');
    })
