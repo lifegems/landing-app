@@ -2102,7 +2102,7 @@ a {
 
 .mainmenu {
   z-index: 100;
-  height: auto;
+  height: 50px;
   width: 100%;
   position: fixed;
   background-color: #fff;
@@ -2254,7 +2254,7 @@ a {
     border-left: 2px solid #7a7f79; }
     @media screen and (max-width: 767px) {
       .toolbar--details {
-        top: 9%;
+        top: 55px;
         width: 95%; } }
   .toolbar--search {
     font-size: 1.7em;

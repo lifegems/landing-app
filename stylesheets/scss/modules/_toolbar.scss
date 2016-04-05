@@ -68,7 +68,7 @@
       border-left: 2px solid $dkgray;
 
       @include setDeviceStyle(phone) {
-         top: 9%;
+         top: 55px;
          width: 95%;
       }
    }
