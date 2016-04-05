@@ -1,0 +1,85 @@
+.mainmenu {
+   z-index: 100;
+   height: auto;
+   width: 100%;
+   position: fixed;
+   background-color: $white;
+
+   border-bottom: 2px solid $ltgray;
+
+   @include setDeviceStyle(phone) {
+      border-bottom: none;
+   }
+
+   &--title {
+      text-align: center;
+      margin-top: 6px;
+
+      @include setDeviceStyle(phone) {
+         width: 100%;
+         padding: 10px;
+         border-bottom: 2px solid $ltgray;
+      }
+   }
+
+   &--expand {
+      width: 10%;
+      display: none;
+      padding: 10px;
+      float: left;
+      text-align: center;
+      background-color: $ltgray;
+
+      &:hover {
+         cursor: pointer;
+      }
+
+      @include setDeviceStyle(phone) {
+         margin: 0px;
+         display: block;
+      }
+   }
+
+   &--item {
+      margin: 0px;
+      display: block;
+      float: left;
+      list-style: none;
+      width: 80px;
+      height: 30px;
+      background-color: $white;
+      border: 1px solid $white;
+
+      // text
+      padding: 4px;
+      text-align: center;
+      font-size: 1.3em;
+      line-height: 1.5em;
+      font-variant-caps: all-small-caps;
+
+      @include setDeviceStyle(phone) {
+         display: block;
+         width: 100%;
+         padding: 6px;
+         border: 2px solid $ltgray;
+
+         &:hover {
+            border: 2px solid $mdgray;
+         }
+      }
+
+      // states
+      &:hover {
+         border: 1px solid $mdgray;
+         cursor: pointer;
+      }
+      &.is-active {
+         background-color: $mdgray;
+         color: $black;
+         font-weight: bold;
+      }
+      &.is-hidden {
+         display: none;
+      }
+   }
+}
