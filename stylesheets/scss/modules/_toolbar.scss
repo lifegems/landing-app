@@ -1,9 +1,50 @@
+.details {
+   &--header {
+      width: 100%;
+      height: 35px;
+      text-align: left;
+      border-bottom: 1px solid $mdgray;
+      line-height: 35px;
+
+      @include setDeviceStyle(phone) {
+         position: fixed;
+         background-color: $ltgray;
+      }
+   }
+
+   &--expand {
+      float: left;
+      padding: 0px 10px;
+      height: 100%;
+      border-right: 2px solid $mdgray;
+   }
+
+   &--title {
+      text-align: center !important;
+   }
+
+   &--content {
+      overflow: hidden;
+
+      min-height: 100vh;
+      display: block;
+      width: 95%;
+   }
+
+   &--section {
+      padding: 15px 20px;
+      width: 97%;
+      text-align: left;
+      border-bottom: 2px solid $mdgray;
+   }
+}
+
 .toolbar {
    display: inline;
    position: fixed;
    bottom: 0px;
    width: 100%;
-   background-color: white;
+   background-color: $white;
 
    @include setDeviceStyle(desktop) {
       left: 0px;
@@ -11,6 +52,25 @@
       display: block;
       width: 45px;
       text-align: center;
+   }
+
+   &--details {
+      display: none;
+      position: fixed;
+      overflow-y: auto;
+      right: 0px;
+      top: 6.5%;
+      z-index: 3;
+
+      width: 30%;
+      height: 91%;
+      background-color: $ltgray;
+      border-left: 2px solid $dkgray;
+
+      @include setDeviceStyle(phone) {
+         top: 9%;
+         width: 95%;
+      }
    }
 
    &--search {

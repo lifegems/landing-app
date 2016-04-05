@@ -1,0 +1,23 @@
+{
+   "EVENTS": [
+      {
+         "id"    : "001",
+         "title" : "",
+         "type"  : "",
+         "period": {
+            "start": {
+               "era"  : "AD|BC",
+               "year" : "####",
+               "month": "Nisan|January..",
+               "day"  : "1-31",
+               "hour" : "1-24",
+               "type" : "before|circa|after|at"
+            },
+            "end": {
+
+            }
+         },
+         "details": {}
+      }
+   ]
+}
