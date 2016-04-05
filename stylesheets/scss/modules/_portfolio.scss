@@ -1,34 +1,24 @@
 
 .portfolio {
-   display: block;
-   width: 90vw;
-   margin: 0 auto;
+   border-collapse: collapse;
+   table-layout: fixed;
+   width: 80vw;
 
    @include setDeviceStyle(phone) {
-      display: block;
-      width: 100%;
-      margin: 30px auto;
-      padding: 0.1px;
+      width: 280vw;
+      margin: 40px auto;
    }
 
 
    &--item {
-      display: block;
-      margin: 10px;
-      float: left;
-      width: 20vw;
-      height: 45vh;
-      overflow: hidden;
       border: 1px solid $ltgray;
       border-radius: 3px;
       padding: 25px;
       box-shadow: 5px 5px 5px 0px $mdgray;
+      width: 25vw;
 
       @include setDeviceStyle(phone) {
-         float: none;
-         margin: 15px auto;
-         width: 70vw;
-         height: 50vh;
+         width: 75vw;
       }
 
       &--title {

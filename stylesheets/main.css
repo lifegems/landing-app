@@ -2164,32 +2164,22 @@ a {
       display: none; }
 
 .portfolio {
-  display: block;
-  width: 90vw;
-  margin: 0 auto; }
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 80vw; }
   @media screen and (max-width: 767px) {
     .portfolio {
-      display: block;
-      width: 100%;
-      margin: 30px auto;
-      padding: 0.1px; } }
+      width: 280vw;
+      margin: 40px auto; } }
   .portfolio--item {
-    display: block;
-    margin: 10px;
-    float: left;
-    width: 20vw;
-    height: 45vh;
-    overflow: hidden;
     border: 1px solid #eae9e6;
     border-radius: 3px;
     padding: 25px;
-    box-shadow: 5px 5px 5px 0px #d9dad8; }
+    box-shadow: 5px 5px 5px 0px #d9dad8;
+    width: 25vw; }
     @media screen and (max-width: 767px) {
       .portfolio--item {
-        float: none;
-        margin: 15px auto;
-        width: 70vw;
-        height: 50vh; } }
+        width: 75vw; } }
     .portfolio--item--title {
       border-top: 1px solid #eae9e6;
       padding: 5px;
