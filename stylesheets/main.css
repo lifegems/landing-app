@@ -2130,7 +2130,11 @@ a {
     @media screen and (max-width: 767px) {
       .mainmenu--expand {
         margin: 0px;
-        display: block; } }
+        display: block;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        padding: 12px; } }
   .mainmenu--item {
     margin: 0px;
     display: block;

@@ -37,6 +37,10 @@
       @include setDeviceStyle(phone) {
          margin: 0px;
          display: block;
+         position: fixed;
+         left: 0px;
+         top: 0px;
+         padding: 12px;
       }
    }
 
