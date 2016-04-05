@@ -78,22 +78,27 @@
       });
    });
 
+   function getDatesRow() {
+      var $dates = $("<tfoot></tfoot>", {class: ".timeline--dateline"});
+      var $line = $("<tr></tr>");
+      for (var i = 0; i < 15; i++) {
+         var $footer = $("<th></th>", {class: "date"})
+         var $date = $("<div></div>", {class: "date--span"});
+         var date = 4027 - i;
+         $date.text(date);
+         $footer.append($date);
+
+         $line.append($footer);
+      }
+      $dates.append($line);
+      return $dates;
+   }
+
    function loadTimeline() {
       var $tl = $(".timeline");
       if ($tl.length === 1) {
          // build date line
-         var $dates = $("<tfoot></tfoot>", {class: ".timeline--dateline"});
-         var $line = $("<tr></tr>");
-         for (var i = 0; i < 15; i++) {
-            var $footer = $("<th></th>", {class: "date"})
-            var $date = $("<div></div>", {class: "date--span"});
-            var date = 4027 - i;
-            $date.text(date);
-            $footer.append($date);
-
-            $line.append($footer);
-         }
-         $dates.append($line);
+         var $dates = getDatesRow();
 
          // build events
          var $events = $("<tbody></tbody", {class: "events"});

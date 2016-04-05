@@ -1,0 +1,48 @@
+.toolbar {
+   display: inline;
+   position: fixed;
+   bottom: 0px;
+   width: 100%;
+   background-color: white;
+
+   @include setDeviceStyle(desktop) {
+      left: 0px;
+      bottom: 60%;
+      display: block;
+      width: 45px;
+      text-align: center;
+   }
+
+   &--search {
+      font-size: 1.7em;
+      color: $dkgray;
+      display: inline;
+      float: left;
+      border: 0.5px solid $ltgray;
+      padding: 5px 10px;
+   }
+   &--searchbox {
+      display: none;
+   }
+   &--year {
+      font-size: 1.7em;
+      color: $dkgray;
+      display: inline;
+      float: left;
+      border: 0.5px solid $ltgray;
+      padding: 5px 10px;
+   }
+   &--zoom--in, &--zoom--out {
+      font-size: 1.7em;
+      color: $dkgray;
+      display: inline;
+      float: right;
+      padding: 5px 10px;
+      border: 0.5px solid $ltgray;
+
+      @include setDeviceStyle(desktop) {
+         float: left;
+         /*width: 100%;*/
+      }
+   }
+}

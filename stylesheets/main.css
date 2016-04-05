@@ -2195,6 +2195,47 @@ a {
     .portfolio--item:hover {
       box-shadow: 10px 10px 5px 0px #d9dad8; }
 
+.toolbar {
+  display: inline;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: white; }
+  @media screen and (min-width: 1041px) {
+    .toolbar {
+      left: 0px;
+      bottom: 60%;
+      display: block;
+      width: 45px;
+      text-align: center; } }
+  .toolbar--search {
+    font-size: 1.7em;
+    color: #7a7f79;
+    display: inline;
+    float: left;
+    border: 0.5px solid #eae9e6;
+    padding: 5px 10px; }
+  .toolbar--searchbox {
+    display: none; }
+  .toolbar--year {
+    font-size: 1.7em;
+    color: #7a7f79;
+    display: inline;
+    float: left;
+    border: 0.5px solid #eae9e6;
+    padding: 5px 10px; }
+  .toolbar--zoom--in, .toolbar--zoom--out {
+    font-size: 1.7em;
+    color: #7a7f79;
+    display: inline;
+    float: right;
+    padding: 5px 10px;
+    border: 0.5px solid #eae9e6; }
+    @media screen and (min-width: 1041px) {
+      .toolbar--zoom--in, .toolbar--zoom--out {
+        float: left;
+        /*width: 100%;*/ } }
+
 .content {
   margin: 10%;
   flex: 1;
@@ -2225,7 +2266,7 @@ footer {
   width: 100%; }
   @media screen and (max-width: 767px) {
     footer {
-      /*display: none;*/ } }
+      display: none; } }
 
 .policy {
   color: #111;

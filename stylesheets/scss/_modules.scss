@@ -1,5 +1,6 @@
 @import 'modules/mainmenu';
 @import 'modules/portfolio';
+@import 'modules/toolbar';
 
 .content {
    margin: 10%;
@@ -35,7 +36,7 @@ footer {
    width: 100%;
 
    @include setDeviceStyle(phone) {
-      /*display: none;*/
+      display: none;
    }
 }
 
