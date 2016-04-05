@@ -1,4 +1,4 @@
-(function () {
+var Main = (function Main() {
    'use strict';
 
    var isMenuExpanded = false;
@@ -78,6 +78,18 @@
       });
    });
 
+   $('.toolbar--year').on('click', function(e) {
+      if ($('.toolbar--selectyear').css('display') === 'none') {
+         $('.toolbar--selectyear').css('display', 'block');
+      } else {
+         $('.toolbar--selectyear').css('display', 'none');
+      }
+   });
+
+   $('.toolbar--selectyear').on('change', function(e) {
+      $('.toolbar--selectyear').css('display', 'none');
+   })
+
    function getDatesRow() {
       var $dates = $("<tfoot></tfoot>", {class: ".timeline--dateline"});
       var $line = $("<tr></tr>");
@@ -115,5 +127,11 @@
       }
    }
 
-   loadTimeline();
+   var publicAPI = {
+      loadTimeline: loadTimeline
+   };
+
+   return publicAPI;
 })();
+
+Main.loadTimeline();
