@@ -3,6 +3,7 @@
    <head>
       <title>Life Gems. God's word is alive.</title>
 
+      <link rel="stylesheet" type="text/css" href="stylesheets/scss/lib/timeline.css">
       <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -22,7 +23,9 @@
 
       <div class="content">
 
-         <table class="timeline"></table>
+         <div class="timebox">
+            <div id="timeline" class="timeline"></div>
+         </div>
 
          <div class="toolbar">
             <div class="toolbar--details">
@@ -85,6 +88,8 @@
 
       <!-- JS code -->
       <script src="js/lib/jquery-2.2.2.js"></script>
+      <script src="js/lib/timeline3.js"></script>
+      <script src="js/events.js"></script>
       <script src="js/timeline.js"></script>
       <script src="js/menu.js"></script>
       <script src="js/index.js"></script>

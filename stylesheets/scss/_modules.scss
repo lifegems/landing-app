@@ -2,6 +2,7 @@
 @import 'modules/portfolio';
 @import 'modules/toolbar';
 @import 'modules/details';
+@import 'modules/timeline';
 
 .content {
    margin: 10%;
@@ -47,57 +48,4 @@ footer {
    color: $black;
    text-align: center;
    padding: 10px;
-}
-
-.timeline {
-   margin-top: 5px;
-   border-collapse: collapse;
-   table-layout: fixed;
-   &--dateline {
-      bottom: 40px;
-      padding-bottom: 1vh;
-      vertical-align: bottom;
-   }
-}
-
-.events {
-   &--row {
-      border-bottom: 3px solid #fff;
-   }
-   &--event {
-      background-color: $ltgray;
-      width: 50%;
-      border-left: 1px solid #000;
-      border-right: 1px solid #000;
-      padding: 10px;
-
-      &:hover {
-         background-color: $mdgray;
-         cursor: pointer;
-      }
-   }
-
-   &--content {
-      display: none;
-      color: $dkgray;
-   }
-}
-
-.date {
-   background-color: white;
-   color: $dkgray;
-
-   &:hover {
-      cursor: pointer;
-   }
-
-   &--span {
-      width: 33vw;
-
-      @include setDeviceStyle(phone) {
-         width: 100vw;
-         font-size: 30px;
-         /*visibility: hidden;*/
-      }
-   }
 }

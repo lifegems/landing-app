@@ -1,0 +1,10 @@
+.timebox {
+   height: 90%;
+   top: 10vh;
+   position: fixed;
+   width: 80%;
+
+   @include setDeviceStyle(phone) {
+      width: 100%;
+   }
+}

@@ -2299,6 +2299,15 @@ a {
   text-align: left;
   border-bottom: 2px solid #d9dad8; }
 
+.timebox {
+  height: 90%;
+  top: 10vh;
+  position: fixed;
+  width: 80%; }
+  @media screen and (max-width: 767px) {
+    .timebox {
+      width: 100%; } }
+
 .content {
   margin: 10%;
   flex: 1;
@@ -2337,42 +2346,5 @@ footer {
   color: #111;
   text-align: center;
   padding: 10px; }
-
-.timeline {
-  margin-top: 5px;
-  border-collapse: collapse;
-  table-layout: fixed; }
-  .timeline--dateline {
-    bottom: 40px;
-    padding-bottom: 1vh;
-    vertical-align: bottom; }
-
-.events--row {
-  border-bottom: 3px solid #fff; }
-.events--event {
-  background-color: #eae9e6;
-  width: 50%;
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
-  padding: 10px; }
-  .events--event:hover {
-    background-color: #d9dad8;
-    cursor: pointer; }
-.events--content {
-  display: none;
-  color: #7a7f79; }
-
-.date {
-  background-color: white;
-  color: #7a7f79; }
-  .date:hover {
-    cursor: pointer; }
-  .date--span {
-    width: 33vw; }
-    @media screen and (max-width: 767px) {
-      .date--span {
-        width: 100vw;
-        font-size: 30px;
-        /*visibility: hidden;*/ } }
 
 /*# sourceMappingURL=main.css.map */
