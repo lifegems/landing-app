@@ -200,6 +200,34 @@ EVENTS.EVENTS = [
          "headline": "The Great Deluge",
          "details": "A global judgment by water."
       }
+   },
+   {
+      "unique_id": "EVT_002",
+      "group": "Events",
+      "start_date": {
+         "year": "-5000"
+      },
+      "end_date": {
+         "year": "-1657"
+      },
+      "text": {
+         "headline": "Covered by Genesis",
+         "details": "A global judgment by water."
+      }
+   },
+   {
+      "unique_id": "EVT_003",
+      "group": "Events",
+      "start_date": {
+         "year": "33",
+         "month": "4",
+         "day": "8",
+         "hour": "6"
+      },
+      "text": {
+         "headline": "Jesus arrives at Bethany",
+         "details": "Jesus arrives in Bethany six days before the Passover."
+      }
    }
 ];
 

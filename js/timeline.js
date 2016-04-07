@@ -74,9 +74,18 @@ var Timeline = (function Timeline() {
 
       $(".tl-timemarker").on('click', function(e) {
          var id = $(this).prop('id').substr(0, 7);
+         var type = id.substr(0, 3);
 
+         var aEvents = [];
+         if (type === "PAT") {
+            aEvents = EVENTS.PATRIARCHS;
+         } else if (type === "EVT") {
+            aEvents = EVENTS.EVENTS;
+         } else if (type === "BBL") {
+            aEvents = EVENTS.BIBLEBOOKS;
+         }
          // determine way to include all event types
-         var item = $.grep(EVENTS.PATRIARCHS, function(d) {
+         var item = $.grep(aEvents, function(d) {
             return d.unique_id === id;
          });
 
