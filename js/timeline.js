@@ -111,9 +111,21 @@ var Timeline = (function Timeline() {
 
       // hide advert
       $('.tl-attribution').remove();
+      $('.toolbar .tl-menubar-button').remove();
+
+      // add nav buttons
+      var $prev = $('<div class="tl-menubar-button"><span class="fa fa-chevron-left"></span></div>');
+      $('.toolbar').append($prev);
+      $prev.click(function(e) {
+         window.timeline.goToPrev();
+      });
+      var $next = $('<div class="tl-menubar-button"><span class="fa fa-chevron-right"></span></div>');
+      $next.click(function(e) {
+         window.timeline.goToNext();
+      });
+      $('.toolbar').append($next);
 
       // move menu toolbar
-      $('.toolbar .tl-menubar-button').remove();
       var $menu = $('.tl-menubar');
       $('.toolbar').append($menu.children());
    }

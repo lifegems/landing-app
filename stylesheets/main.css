@@ -2205,18 +2205,25 @@ a {
   position: fixed;
   bottom: 0px;
   width: 100%;
-  background-color: #fff; }
+  background-color: #F2F2F2; }
   @media screen and (min-width: 1041px) {
     .toolbar {
       left: 0px;
       bottom: 60%;
       display: block;
       width: 45px;
-      text-align: center; } }
+      text-align: center;
+      padding: 3px 0px !important; } }
   .toolbar .tl-menubar-button {
     float: left;
     width: 18px;
-    height: 18px; }
+    height: 18px;
+    margin: 0px 5px; }
+    .toolbar .tl-menubar-button .tl-slidenav-next {
+      float: left;
+      top: 0px !important;
+      left: 0px;
+      padding: 5px; }
   .toolbar--details {
     display: none;
     position: fixed;
@@ -2337,7 +2344,8 @@ a {
   .details--expand:hover {
     cursor: pointer; }
 .details--title {
-  text-align: center !important; }
+  text-align: center !important;
+  font-size: 1em; }
 .details--content {
   overflow: hidden;
   min-height: 100vh;
