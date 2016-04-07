@@ -6,12 +6,13 @@
    background-color: #F2F2F2;
 
    @include setDeviceStyle(desktop) {
+      height: 50px;
+      padding: 10px 0px;
       left: 0px;
       bottom: 60%;
       display: block;
       width: 45px;
       text-align: center;
-      padding: 3px 0px !important;
    }
 
    .tl-menubar-button {
@@ -78,6 +79,8 @@
       .events--types {
          padding: 15px;
          text-align: left;
+         height: 50%;
+         overflow-y: scroll;
       }
 
       .events--ckb {
@@ -94,9 +97,11 @@
          margin: 15px 0px;
 
          @include setDeviceStyle(phone) {
-            display: block;
+            /*display: block;*/
+            position: fixed;
             width: 80%;
-            margin: 0 auto;
+            left: 5vw;
+            bottom: 3vh;
             text-align: center;
 
             color: $dkgray;
