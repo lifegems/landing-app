@@ -12,7 +12,6 @@ EVENTS.PATRIARCHS = [
       },
       "text": {
          "headline": "Adam",
-         "span": "4026 BCE - 3096 BCE",
          "details": "The firstborn of the human family."
       }
    },
@@ -186,7 +185,10 @@ EVENTS.PATRIARCHS = [
       "text": {
          "headline": "Japheth"
       }
-   },
+   }
+];
+
+EVENTS.EVENTS = [
    {
       "unique_id": "EVT_14",
       "group": "Events",
@@ -198,20 +200,6 @@ EVENTS.PATRIARCHS = [
       },
       "text": {
          "headline": "The Great Deluge"
-      }
-   }
-];
-
-EVENTS.EVENTS = [
-   {
-      "start_date": {
-         "year": "-2470"
-      },
-      "end_date": {
-         "year": "-2070"
-      },
-      "text": {
-         "headline": "WHAT??"
       }
    }
 ];

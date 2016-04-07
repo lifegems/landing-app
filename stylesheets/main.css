@@ -2214,7 +2214,9 @@ a {
       width: 45px;
       text-align: center; } }
   .toolbar .tl-menubar-button {
-    float: left; }
+    float: left;
+    width: 18px;
+    height: 18px; }
   .toolbar--details {
     display: none;
     position: fixed;
@@ -2230,6 +2232,52 @@ a {
       .toolbar--details {
         top: 55px;
         width: 95%; } }
+  .toolbar--events {
+    z-index: 300;
+    position: fixed;
+    top: 15%;
+    left: 10%;
+    width: 15%;
+    padding: 25px 0px;
+    border: 1px solid #d9dad8;
+    border-radius: 4px;
+    background-color: #eae9e6; }
+    @media screen and (max-width: 767px) {
+      .toolbar--events {
+        left: 0px;
+        width: 100%;
+        height: 100%; } }
+    .toolbar--events .events--title {
+      padding-bottom: 15px;
+      border-bottom: 2px solid #7a7f79; }
+      @media screen and (max-width: 767px) {
+        .toolbar--events .events--title {
+          text-align: center; } }
+    .toolbar--events .events--types {
+      padding: 15px;
+      text-align: left; }
+    .toolbar--events .events--ckb {
+      padding: 15px;
+      border-radius: 4px;
+      border: 1px solid #d9dad8;
+      margin: 15px 0px; }
+    .toolbar--events .events--save {
+      padding: 15px;
+      border-radius: 4px;
+      border: 1px solid #d9dad8;
+      margin: 15px 0px; }
+      @media screen and (max-width: 767px) {
+        .toolbar--events .events--save {
+          display: block;
+          width: 80%;
+          margin: 0 auto;
+          text-align: center;
+          color: #7a7f79;
+          border: 1px solid #7a7f79; } }
+      .toolbar--events .events--save:hover {
+        color: #fff;
+        border: 1px solid #fff;
+        cursor: pointer; }
   .toolbar--selectyear {
     width: 100%;
     display: none;

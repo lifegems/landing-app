@@ -4,9 +4,23 @@ var Timeline = (function Timeline() {
       loadTimeline: loadTimeline
    };
 
+   var hasLoadedTL = false;
+   var aDefaultSettings = ["PAT", "EVT"];
+   var aUserSettings = [];
+
    /**
     * FUNCTIONS
     */
+   function addEventSelector() {
+      var $MenuIcon = $('<span class="tl-menubar-button"><span class="fa fa-bars"></span></span>');
+      $MenuIcon.click(function(e) {
+         $('.toolbar--events').show();
+      });
+      if (hasLoadedTL !== true) {
+         $('.toolbar').append($MenuIcon)
+      }
+   }
+
    function addEventTypeColors() {
       var aEventColors = [
          {"type": "PAT","color": "gray"},
@@ -29,7 +43,17 @@ var Timeline = (function Timeline() {
          }
       };
 
-      json.events = EVENTS.PATRIARCHS;
+      var aSettings = (aUserSettings.length > 0) ? aUserSettings : aDefaultSettings;
+      var aEvents = [];
+      $.each(aSettings, function(_, strEventType) {
+         if (strEventType === "PAT") {
+            aEvents = aEvents.concat(EVENTS.PATRIARCHS);
+         }
+         if (strEventType === "EVT") {
+            aEvents = aEvents.concat(EVENTS.EVENTS);
+         }
+      });
+      json.events = aEvents;
 
       return json;
    }
@@ -40,8 +64,9 @@ var Timeline = (function Timeline() {
          "timenav_height_percentage": 90
       });
       hideSlider();
+      hideEventSelector();
       addEventTypeColors();
-
+      addEventSelector();
 
       $(".tl-timemarker").on('click', function(e) {
          var id = $(this).prop('id').substr(0, 6);
@@ -49,11 +74,9 @@ var Timeline = (function Timeline() {
             return d.unique_id === id;
          });
 
-         var title = item[0].text.headline + " (" + item[0].text.span + ")";
-         $('.details--title').text(title);
+         $('.details--title').text(item[0].text.headline);
 
          $('.details--content').text("");
-
          var $section = $('<div></div>', {class: "details--section"});
          $section.text(item[0].text.details);
          $('.details--content').append($section);
@@ -68,8 +91,14 @@ var Timeline = (function Timeline() {
       // hide advert
       $('.tl-attribution').remove();
 
+      // move menu toolbar
+      $('.toolbar .tl-menubar-button').remove();
       var $menu = $('.tl-menubar');
       $('.toolbar').append($menu.children());
+   }
+
+   function hideEventSelector() {
+      $('.toolbar--events').hide();
    }
 
    /**
@@ -77,6 +106,21 @@ var Timeline = (function Timeline() {
     */
    $(".details--expand").on('click', function(e) {
       $('.toolbar--details').hide();
+   });
+
+   $(".events--save").click(function(e) {
+      aUserSettings = [];
+      var $settingsCkb = $('[id^="events--"]');
+      $.each($settingsCkb, function(_, d) {
+         var strEventType = $(d).attr('id').substr(8);
+
+         if ($(d).is(':checked') === true) {
+            aUserSettings.push(strEventType);
+         }
+      });
+      loadTimeline();
+
+      $('.toolbar--events').hide();
    });
 
    return service;
