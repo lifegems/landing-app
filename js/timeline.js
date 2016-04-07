@@ -32,6 +32,9 @@ var Timeline = (function Timeline() {
 
 
       $(".tl-timemarker").on('click', function(e) {
+         var id = $(this).prop('id').substr(0, 6);
+//         alert(id);
+         
          $('.toolbar--details').show();
       });
    }
@@ -41,6 +44,9 @@ var Timeline = (function Timeline() {
 
       // hide advert
       $('.tl-attribution').remove();
+      
+      var $menu = $('.tl-menubar');
+      $('.toolbar').append($menu.children());
    }
 
    /**
@@ -48,7 +54,7 @@ var Timeline = (function Timeline() {
     */
    $(".details--expand").on('click', function(e) {
       $('.toolbar--details').hide();
-   })
+   });
 
    return service;
 })();

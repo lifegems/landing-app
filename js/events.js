@@ -2,6 +2,8 @@ var EVENTS = {};
 
 EVENTS.PATRIARCHS = [
    {
+      "unique_id": "PAT_01",
+      "group": "PAT",
       "start_date": {
          "year": "-4026"
       },
@@ -13,6 +15,8 @@ EVENTS.PATRIARCHS = [
       }
    },
    {
+      "unique_id": "PAT_02",
+      "group": "PAT",
       "start_date": {
          "year": "-4000",
          "display_date": "a. 4026 BCE"
@@ -26,6 +30,8 @@ EVENTS.PATRIARCHS = [
       }
    },
    {
+      "unique_id": "PAT_03",
+      "group": "PAT",
       "start_date": {
          "year": "-3896"
       },
@@ -37,6 +43,8 @@ EVENTS.PATRIARCHS = [
       }
    },
    {
+      "unique_id": "PAT_04",
+      "group": "PAT",
       "start_date": {
          "year": "-3791"
       },
@@ -48,6 +56,8 @@ EVENTS.PATRIARCHS = [
       }
    },
    {
+      "unique_id": "PAT_05",
+      "group": "PAT",
       "start_date": {
          "year": "-3701"
       },
@@ -59,6 +69,8 @@ EVENTS.PATRIARCHS = [
       }
    },
    {
+      "unique_id": "PAT_06",
+      "group": "PAT",
       "start_date": {
          "year": "-3631"
       },
@@ -70,6 +82,8 @@ EVENTS.PATRIARCHS = [
       }
    },
    {
+      "unique_id": "PAT_07",
+      "group": "PAT",
       "start_date": {
          "year": "-3566"
       },
@@ -81,6 +95,8 @@ EVENTS.PATRIARCHS = [
       }
    },
    {
+      "unique_id": "PAT_08",
+      "group": "PAT",
       "start_date": {
          "year": "-3404"
       },
@@ -92,6 +108,8 @@ EVENTS.PATRIARCHS = [
       }
    },
    {
+      "unique_id": "PAT_09",
+      "group": "PAT",
       "start_date": {
          "year": "-3339"
       },
@@ -103,6 +121,8 @@ EVENTS.PATRIARCHS = [
       }
    },
    {
+      "unique_id": "PAT_10",
+      "group": "PAT",
       "start_date": {
          "year": "-3152"
       },
@@ -114,6 +134,8 @@ EVENTS.PATRIARCHS = [
       }
    },
    {
+      "unique_id": "PAT_11",
+      "group": "PAT",
       "start_date": {
          "year": "-2970"
       },
@@ -125,6 +147,8 @@ EVENTS.PATRIARCHS = [
       }
    },
    {
+      "unique_id": "PAT_12",
+      "group": "PAT",
       "start_date": {
          "year": "-2470"
       },
@@ -136,6 +160,8 @@ EVENTS.PATRIARCHS = [
       }
    },
    {
+      "unique_id": "PAT_13",
+      "group": "PAT",
       "start_date": {
          "year": "-2470"
       },
@@ -147,6 +173,8 @@ EVENTS.PATRIARCHS = [
       }
    },
    {
+      "unique_id": "PAT_14",
+      "group": "PAT",
       "start_date": {
          "year": "-2470"
       },
