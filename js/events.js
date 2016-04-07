@@ -3,7 +3,7 @@ var EVENTS = {};
 EVENTS.PATRIARCHS = [
    {
       "unique_id": "PAT_01",
-      "group": "PAT",
+      "group": "Patriarchs",
       "start_date": {
          "year": "-4026"
       },
@@ -11,12 +11,14 @@ EVENTS.PATRIARCHS = [
          "year": "-3096"
       },
       "text": {
-         "headline": "Adam"
+         "headline": "Adam",
+         "span": "4026 BCE - 3096 BCE",
+         "details": "The firstborn of the human family."
       }
    },
    {
       "unique_id": "PAT_02",
-      "group": "PAT",
+      "group": "Patriarchs",
       "start_date": {
          "year": "-4000",
          "display_date": "a. 4026 BCE"
@@ -31,7 +33,7 @@ EVENTS.PATRIARCHS = [
    },
    {
       "unique_id": "PAT_03",
-      "group": "PAT",
+      "group": "Patriarchs",
       "start_date": {
          "year": "-3896"
       },
@@ -44,7 +46,7 @@ EVENTS.PATRIARCHS = [
    },
    {
       "unique_id": "PAT_04",
-      "group": "PAT",
+      "group": "Patriarchs",
       "start_date": {
          "year": "-3791"
       },
@@ -57,7 +59,7 @@ EVENTS.PATRIARCHS = [
    },
    {
       "unique_id": "PAT_05",
-      "group": "PAT",
+      "group": "Patriarchs",
       "start_date": {
          "year": "-3701"
       },
@@ -70,7 +72,7 @@ EVENTS.PATRIARCHS = [
    },
    {
       "unique_id": "PAT_06",
-      "group": "PAT",
+      "group": "Patriarchs",
       "start_date": {
          "year": "-3631"
       },
@@ -83,7 +85,7 @@ EVENTS.PATRIARCHS = [
    },
    {
       "unique_id": "PAT_07",
-      "group": "PAT",
+      "group": "Patriarchs",
       "start_date": {
          "year": "-3566"
       },
@@ -96,7 +98,7 @@ EVENTS.PATRIARCHS = [
    },
    {
       "unique_id": "PAT_08",
-      "group": "PAT",
+      "group": "Patriarchs",
       "start_date": {
          "year": "-3404"
       },
@@ -109,7 +111,7 @@ EVENTS.PATRIARCHS = [
    },
    {
       "unique_id": "PAT_09",
-      "group": "PAT",
+      "group": "Patriarchs",
       "start_date": {
          "year": "-3339"
       },
@@ -122,7 +124,7 @@ EVENTS.PATRIARCHS = [
    },
    {
       "unique_id": "PAT_10",
-      "group": "PAT",
+      "group": "Patriarchs",
       "start_date": {
          "year": "-3152"
       },
@@ -135,7 +137,7 @@ EVENTS.PATRIARCHS = [
    },
    {
       "unique_id": "PAT_11",
-      "group": "PAT",
+      "group": "Patriarchs",
       "start_date": {
          "year": "-2970"
       },
@@ -148,12 +150,12 @@ EVENTS.PATRIARCHS = [
    },
    {
       "unique_id": "PAT_12",
-      "group": "PAT",
+      "group": "Patriarchs",
       "start_date": {
-         "year": "-2470"
+         "year": "-2469"
       },
       "end_date": {
-         "year": "-2070"
+         "year": "-1870"
       },
       "text": {
          "headline": "Shem"
@@ -161,9 +163,9 @@ EVENTS.PATRIARCHS = [
    },
    {
       "unique_id": "PAT_13",
-      "group": "PAT",
+      "group": "Patriarchs",
       "start_date": {
-         "year": "-2470"
+         "year": "-2468"
       },
       "end_date": {
          "year": "-2070"
@@ -174,7 +176,7 @@ EVENTS.PATRIARCHS = [
    },
    {
       "unique_id": "PAT_14",
-      "group": "PAT",
+      "group": "Patriarchs",
       "start_date": {
          "year": "-2470"
       },
@@ -183,6 +185,19 @@ EVENTS.PATRIARCHS = [
       },
       "text": {
          "headline": "Japheth"
+      }
+   },
+   {
+      "unique_id": "EVT_14",
+      "group": "Events",
+      "start_date": {
+         "year": "-2370"
+      },
+      "end_date": {
+         "year": "-2369"
+      },
+      "text": {
+         "headline": "The Great Deluge"
       }
    }
 ];
