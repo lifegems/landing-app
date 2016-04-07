@@ -5,7 +5,7 @@ var Timeline = (function Timeline() {
    };
 
    var hasLoadedTL = false;
-   var aDefaultSettings = ["PAT", "EVT"];
+   var aDefaultSettings = ["PAT", "EVT", "BBL"];
    var aUserSettings = [];
 
    /**
@@ -24,7 +24,8 @@ var Timeline = (function Timeline() {
    function addEventTypeColors() {
       var aEventColors = [
          {"type": "PAT","color": "gray"},
-         {"type": "EVT","color": "red"}
+         {"type": "EVT","color": "red"},
+         {"type": "BBL","color": "#88b"}
       ];
 
       $.each(aEventColors, function() {
@@ -52,6 +53,9 @@ var Timeline = (function Timeline() {
          if (strEventType === "EVT") {
             aEvents = aEvents.concat(EVENTS.EVENTS);
          }
+         if (strEventType === "BBL") {
+            aEvents = aEvents.concat(EVENTS.BIBLEBOOKS);
+         }
       });
       json.events = aEvents;
 
@@ -69,7 +73,9 @@ var Timeline = (function Timeline() {
       addEventSelector();
 
       $(".tl-timemarker").on('click', function(e) {
-         var id = $(this).prop('id').substr(0, 6);
+         var id = $(this).prop('id').substr(0, 7);
+
+         // determine way to include all event types
          var item = $.grep(EVENTS.PATRIARCHS, function(d) {
             return d.unique_id === id;
          });
