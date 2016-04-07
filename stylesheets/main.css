@@ -2343,6 +2343,8 @@ a {
   min-height: 100vh;
   display: block;
   width: 95%; }
+  .details--content ul {
+    padding: 15px; }
 .details--section {
   padding: 15px 20px;
   width: 97%;

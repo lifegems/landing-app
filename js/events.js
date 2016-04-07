@@ -214,20 +214,6 @@ EVENTS.EVENTS = [
          "headline": "Covered by Genesis",
          "details": "A global judgment by water."
       }
-   },
-   {
-      "unique_id": "EVT_003",
-      "group": "Events",
-      "start_date": {
-         "year": "33",
-         "month": "4",
-         "day": "8",
-         "hour": "6"
-      },
-      "text": {
-         "headline": "Jesus arrives at Bethany",
-         "details": "Jesus arrives in Bethany six days before the Passover."
-      }
    }
 ];
 
@@ -917,6 +903,191 @@ EVENTS.BIBLEBOOKS = [
       },
       "text": {
          "headline": "Revelation"
+      }
+   }
+];
+
+EVENTS.JESUSFINALWK = [
+   {
+      "unique_id": "JFW_001",
+      "group": "Jesus' Final Week on Earth",
+      "start_date": {
+         "year": "33",
+         "month": "4",
+         "day": "1",
+         "hour": "20"
+      },
+      "text": {
+         "headline": "Jesus arrives at Bethany",
+         "details": "<h3>Nisan 8</h3><ul><li>Jesus arrives in Bethany six days before the Passover.</li></ul>"
+      }
+   },
+   {
+      "unique_id": "JFW_002",
+      "group": "Jesus' Final Week on Earth",
+      "start_date": {
+         "year": "33",
+         "month": "4",
+         "day": "2",
+         "hour": "20"
+      },
+      "text": {
+         "headline": "Spends time in Bethany",
+         "details": "<h3>Nisan 9</h3><ul><li>Dines with Simon the leper.</li><li>Mary anointed Jesus with nard.</li><li>Jews come to visit Jesus and Lazarus.</li></ul>"
+      }
+   },
+   {
+      "unique_id": "JFW_003",
+      "group": "Jesus' Final Week on Earth",
+      "start_date": {
+         "year": "33",
+         "month": "4",
+         "day": "3",
+         "hour": "7"
+      },
+      "text": {
+         "headline": "Travels to Jerusalem",
+         "details": "<h3>Nisan 9</h3><ul><li>Triumphal entry into Jerusalem.</li><li>Teaches in the temple.</li></ul>"
+      }
+   },
+   {
+      "unique_id": "JFW_004",
+      "group": "Jesus' Final Week on Earth",
+      "start_date": {
+         "year": "33",
+         "month": "4",
+         "day": "3",
+         "hour": "22"
+      },
+      "text": {
+         "headline": "Stays in Bethany",
+         "details": "<h3>Nisan 10</h3><ul><li>Spends the night in Bethany.</li></ul>"
+      }
+   },
+   {
+      "unique_id": "JFW_005",
+      "group": "Jesus' Final Week on Earth",
+      "start_date": {
+         "year": "33",
+         "month": "4",
+         "day": "4",
+         "hour": "7"
+      },
+      "text": {
+         "headline": "Travels again to Jerusalem",
+         "details": "<h3>Nisan 10</h3><ul><li>Early trip into Jersualem.</li><li>Cleanses the temple</li><li>Jehovah speaks from heaven.</li></ul>"
+      }
+   },
+   {
+      "unique_id": "JFW_006",
+      "group": "Jesus' Final Week on Earth",
+      "start_date": {
+         "year": "33",
+         "month": "4",
+         "day": "5",
+         "hour": "7"
+      },
+      "text": {
+         "headline": "Events in Jersualem",
+         "details": "<h3>Nisan 11</h3><ul><li>Teaches in the temple, using illustrations.</li><li>Condemns Pharisees.</li><li>Notes widow’s contribution.</li><li>On Mount of Olives, foretells Jerusalem’s fall and gives sign of future presence.</li></ul>"
+      }
+   },
+   {
+      "unique_id": "JFW_007",
+      "group": "Jesus' Final Week on Earth",
+      "start_date": {
+         "year": "33",
+         "month": "4",
+         "day": "6",
+         "hour": "7"
+      },
+      "text": {
+         "headline": "Quiet day for Jesus",
+         "details": "<h3>Nisan 12</h3><ul><li>Quiet day with disciples</li><li>Judas arranges betrayal</li></ul>"
+      }
+   },
+   {
+      "unique_id": "JFW_008",
+      "group": "Jesus' Final Week on Earth",
+      "start_date": {
+         "year": "33",
+         "month": "4",
+         "day": "7",
+         "hour": "7"
+      },
+      "text": {
+         "headline": "Preparing for the Passover",
+         "details": "<h3>Nisan 13</h3><ul><li>Peter and John prepare for the Passover</li><li>Jesus and other apostles arrive in late afternoon</li></ul>"
+      }
+   },
+   {
+      "unique_id": "JFW_009",
+      "group": "Jesus' Final Week on Earth",
+      "start_date": {
+         "year": "33",
+         "month": "4",
+         "day": "7",
+         "hour": "22"
+      },
+      "text": {
+         "headline": "The Final Passover",
+         "details": "<h3>Nisan 14</h3><ul><li>Eats the Passover with the apostles</li><li>Washes the feet of the apostles</li><li>Dismisses Judas</li><li>Institutes the Lord’s Evening Meal</li><li>Betrayed and arrested in the garden of Gethsemane</li><li>Apostles flee</li><li>Tried by the Sanhedrin at the house of Caiaphas</li><li>Peter denies Jesus</li></ul>"
+      }
+   },
+   {
+      "unique_id": "JFW_009",
+      "group": "Jesus' Final Week on Earth",
+      "start_date": {
+         "year": "33",
+         "month": "4",
+         "day": "8",
+         "hour": "8"
+      },
+      "text": {
+         "headline": "Jesus' death",
+         "details": "<h3>Nisan 14</h3><ul><li>Stands before the Sanhedrin again</li><li>Taken to Pilate, then to Herod, then back to Pilate</li><li>Sentenced to death and executed at Golgotha</li><li>Dies about three o’clock in the afternoon</li><li>Body removed and buried</li></ul>"
+      }
+   },
+   {
+      "unique_id": "JFW_009",
+      "group": "Jesus' Final Week on Earth",
+      "start_date": {
+         "year": "33",
+         "month": "4",
+         "day": "9",
+         "hour": "20"
+      },
+      "text": {
+         "headline": "Guards posted",
+         "details": "<h3>Nisan 15</h3><ul><li>Pilate approves posting guards at Jesus' grave</li></ul>"
+      }
+   },
+   {
+      "unique_id": "JFW_009",
+      "group": "Jesus' Final Week on Earth",
+      "start_date": {
+         "year": "33",
+         "month": "4",
+         "day": "9",
+         "hour": "20"
+      },
+      "text": {
+         "headline": "Guards posted",
+         "details": "<h3>Nisan 16</h3><ul><li>Additional burial spices are purchased</li></ul>"
+      }
+   },
+   {
+      "unique_id": "JFW_009",
+      "group": "Jesus' Final Week on Earth",
+      "start_date": {
+         "year": "33",
+         "month": "4",
+         "day": "10",
+         "hour": "20"
+      },
+      "text": {
+         "headline": "Jesus' resurrection",
+         "details": "<h3>Nisan 16</h3><ul><li>Resurrected</li><li>Appears to disciples</li></ul>"
       }
    }
 ];
