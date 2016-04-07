@@ -1091,3 +1091,259 @@ EVENTS.JESUSFINALWK = [
       }
    }
 ];
+
+EVENTS.KINGS = [
+   {
+      "unique_id": "KNG_001",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-1117"
+      },
+      "text": {
+         "headline": "Saul",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_002",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-1077"
+      },
+      "text": {
+         "headline": "David",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_003",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-1037"
+      },
+      "text": {
+         "headline": "Solomon",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_004",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-997"
+      },
+      "text": {
+         "headline": "Rehoboam",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_005",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-980"
+      },
+      "text": {
+         "headline": "Abijah",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_006",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-978"
+      },
+      "text": {
+         "headline": "Asa",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_007",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-937"
+      },
+      "text": {
+         "headline": "Jehoshaphat",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_008",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-913"
+      },
+      "text": {
+         "headline": "Jehoram",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_009",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-906"
+      },
+      "text": {
+         "headline": "Ahaziah",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_010",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-905"
+      },
+      "text": {
+         "headline": "Queen Athaliah",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_011",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-898"
+      },
+      "text": {
+         "headline": "Jehoash",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_012",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-858"
+      },
+      "text": {
+         "headline": "Amaziah",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_013",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-829"
+      },
+      "text": {
+         "headline": "Uzziah (Azariah)",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_014",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-777"
+      },
+      "text": {
+         "headline": "Jotham",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_015",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-762"
+      },
+      "text": {
+         "headline": "Ahaz",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_016",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-746"
+      },
+      "text": {
+         "headline": "Hezekiah",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_017",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-716"
+      },
+      "text": {
+         "headline": "Manasseh",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_018",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-661"
+      },
+      "text": {
+         "headline": "Amon",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_019",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-659"
+      },
+      "text": {
+         "headline": "Josiah",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_020",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-628"
+      },
+      "text": {
+         "headline": "Jehoahaz",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_021",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-628"
+      },
+      "text": {
+         "headline": "Jehoiakim",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_022",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-618"
+      },
+      "text": {
+         "headline": "Jehoiachin",
+         "details": ""
+      }
+   },
+   {
+      "unique_id": "KNG_023",
+      "group": "Kings of Israel",
+      "start_date": {
+         "year": "-617"
+      },
+      "text": {
+         "headline": "Zedekiah",
+         "details": ""
+      }
+   }
+];

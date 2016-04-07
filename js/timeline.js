@@ -26,7 +26,8 @@ var Timeline = (function Timeline() {
          {"type": "PAT","color": "gray"},
          {"type": "EVT","color": "red"},
          {"type": "BBL","color": "#88b"},
-         {"type": "JFW","color": "#45456E"}
+         {"type": "JFW","color": "#45456E"},
+         {"type": "KNG","color": "#DA70D6"}
       ];
 
       $.each(aEventColors, function() {
@@ -60,6 +61,9 @@ var Timeline = (function Timeline() {
          if (strEventType === "JFW") {
             aEvents = aEvents.concat(EVENTS.JESUSFINALWK);
          }
+         if (strEventType === "KNG") {
+            aEvents = aEvents.concat(EVENTS.KINGS);
+         }
       });
       json.events = aEvents;
 
@@ -89,6 +93,8 @@ var Timeline = (function Timeline() {
             aEvents = EVENTS.BIBLEBOOKS;
          } else if (type === "JFW") {
             aEvents = EVENTS.JESUSFINALWK;
+         } else if (type === "KNG") {
+            aEvents = EVENTS.KINGS;
          }
          // determine way to include all event types
          var item = $.grep(aEvents, function(d) {
