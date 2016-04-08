@@ -17,20 +17,27 @@ var Timeline = (function Timeline() {
          $('.toolbar--events').show();
       });
       if (hasLoadedTL !== true) {
-         $('.toolbar').append($MenuIcon)
+         $('.toolbar').append($MenuIcon);
+
+         // load all event types
+         $EventTypes = $('.events--types');
+         $.each(EVENTS['DETAILS'], function(_, d) {
+            var id = "events--" + d.type;
+            $evt = $('<div></div', {class: 'events--ckb'});
+            $ckb = $('<input>', {type: 'checkbox', id: id});
+            $lbl = $('<label></label>', {for: id});
+            $lbl.text(" " + d.title);
+
+            $evt.append($ckb);
+            $evt.append($lbl);
+
+            $EventTypes.append($evt);
+         });
       }
    }
 
    function addEventTypeColors() {
-      var aEventColors = [
-         {"type": "PAT","color": "gray"},
-         {"type": "EVT","color": "red"},
-         {"type": "BBL","color": "#88b"},
-         {"type": "JFW","color": "#45456E"},
-         {"type": "KNG","color": "#DA70D6"}
-      ];
-
-      $.each(aEventColors, function() {
+      $.each(EVENTS['DETAILS'], function() {
          var strSearchTerm = "[id^='" + this.type + "'] > .tl-timemarker-content-container";
          $(strSearchTerm).css('backgroundColor', this.color);
       });
@@ -48,22 +55,12 @@ var Timeline = (function Timeline() {
 
       var aSettings = (aUserSettings.length > 0) ? aUserSettings : aDefaultSettings;
       var aEvents = [];
+
       $.each(aSettings, function(_, strEventType) {
-         if (strEventType === "PAT") {
-            aEvents = aEvents.concat(EVENTS.PATRIARCHS);
-         }
-         if (strEventType === "EVT") {
-            aEvents = aEvents.concat(EVENTS.EVENTS);
-         }
-         if (strEventType === "BBL") {
-            aEvents = aEvents.concat(EVENTS.BIBLEBOOKS);
-         }
-         if (strEventType === "JFW") {
-            aEvents = aEvents.concat(EVENTS.JESUSFINALWK);
-         }
-         if (strEventType === "KNG") {
-            aEvents = aEvents.concat(EVENTS.KINGS);
-         }
+         var detail = $.grep(EVENTS.DETAILS, function(d) {
+            return d.type === strEventType;
+         });
+         aEvents = aEvents.concat(EVENTS[detail[0].name]);
       });
       json.events = aEvents;
 
@@ -85,18 +82,12 @@ var Timeline = (function Timeline() {
          var type = id.substr(0, 3);
 
          var aEvents = [];
-         if (type === "PAT") {
-            aEvents = EVENTS.PATRIARCHS;
-         } else if (type === "EVT") {
-            aEvents = EVENTS.EVENTS;
-         } else if (type === "BBL") {
-            aEvents = EVENTS.BIBLEBOOKS;
-         } else if (type === "JFW") {
-            aEvents = EVENTS.JESUSFINALWK;
-         } else if (type === "KNG") {
-            aEvents = EVENTS.KINGS;
-         }
-         // determine way to include all event types
+         $.each(EVENTS['DETAILS'], function(_, d) {
+            if (d.type === type) {
+               aEvents = EVENTS[d.name];
+            }
+         });
+
          var item = $.grep(aEvents, function(d) {
             return d.unique_id === id;
          });
