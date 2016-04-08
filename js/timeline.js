@@ -17,7 +17,8 @@ var Timeline = (function Timeline() {
          $('.toolbar--events').show();
       });
       if (hasLoadedTL !== true) {
-         $('.toolbar').append($MenuIcon);
+         // $('.toolbar').append($MenuIcon);
+         $('.tl-menubar').prepend($MenuIcon);
 
          // load all event types
          $EventTypes = $('.events--types');
@@ -57,7 +58,7 @@ var Timeline = (function Timeline() {
       var aEvents = [];
 
       $.each(aSettings, function(_, strEventType) {
-         var detail = $.grep(EVENTS.DETAILS, function(d) {
+         var detail = $.grep(EVENTS['DETAILS'], function(d) {
             return d.type === strEventType;
          });
          aEvents = aEvents.concat(EVENTS[detail[0].name]);
@@ -78,25 +79,16 @@ var Timeline = (function Timeline() {
       addEventSelector();
 
       $(".tl-timemarker").on('click', function(e) {
-         var id = $(this).prop('id').substr(0, 7);
+         var slide = window.timeline.getCurrentSlide().data;
+         var id = slide.unique_id;
          var type = id.substr(0, 3);
 
-         var aEvents = [];
-         $.each(EVENTS['DETAILS'], function(_, d) {
-            if (d.type === type) {
-               aEvents = EVENTS[d.name];
-            }
-         });
+         $('.details--title').text(slide.text.headline);
 
-         var item = $.grep(aEvents, function(d) {
-            return d.unique_id === id;
-         });
-
-         $('.details--title').text(item[0].text.headline);
+         var $section = $('<div></div>', {class: "details--section"});
+         $section.html(slide.text.details);
 
          $('.details--content').text("");
-         var $section = $('<div></div>', {class: "details--section"});
-         $section.html(item[0].text.details);
          $('.details--content').append($section);
 
          $('.toolbar--details').show();
@@ -112,7 +104,8 @@ var Timeline = (function Timeline() {
 
       // add nav buttons
       var $prev = $('<div class="tl-menubar-button"><span class="fa fa-chevron-left"></span></div>');
-      $('.toolbar').append($prev);
+      // $('.toolbar').append($prev);
+      $('.tl-menubar').append($prev);
       $prev.click(function(e) {
          window.timeline.goToPrev();
       });
@@ -120,11 +113,13 @@ var Timeline = (function Timeline() {
       $next.click(function(e) {
          window.timeline.goToNext();
       });
-      $('.toolbar').append($next);
+      // $('.toolbar').append($next);
+      $('.tl-menubar').append($next);
 
       // move menu toolbar
-      var $menu = $('.tl-menubar');
-      $('.toolbar').append($menu.children());
+      // var $toolbar = $('.toolbar');
+      // var $menu = $('.tl-menubar');
+      // $menu.append($toolbar.children());
    }
 
    function hideEventSelector() {
