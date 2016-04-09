@@ -48,6 +48,180 @@ EVENTS.DETAILS = [
       "title": "Prophecies",
       "name": "PROPHECY",
       "color": "#8d7ea4"
+   },
+   {
+      "type": "SIB",
+      "title": "SI book",
+      "name": "SIBOOK",
+      "color": "#7f7eae"
+   }
+];
+
+EVENTS.SIBOOK = [
+   {
+      "unique_id": "SIB_001",
+      "group": "Outstanding Dates",
+      "start_date": {
+         "year": "-4026"
+      },
+      "text": {
+         "headline": "Adam's creation",
+         "details": "Gen 2:7<br>Adam's creation"
+      }
+   },
+   {
+      "unique_id": "SIB_002",
+      "group": "Outstanding Dates",
+      "start_date": {
+         "year": "-4026"
+      },
+      "text": {
+         "headline": "Edenic covenant",
+         "details": "Gen 3:15<br>Edenic covenant made, first prophecy"
+      }
+   },
+   {
+      "unique_id": "SIB_003",
+      "group": "Outstanding Dates",
+      "start_date": {
+         "year": "-3896"
+      },
+      "text": {
+         "headline": "Abel Murdered",
+         "details": "Gen 4:8<br>Cain slays abel"
+      }
+   },
+   {
+      "unique_id": "SIB_004",
+      "group": "Outstanding Dates",
+      "start_date": {
+         "year": "-3896"
+      },
+      "text": {
+         "headline": "Birth of Seth",
+         "details": "Gen 5:3<br>Birth of Seth"
+      }
+   },
+   {
+      "unique_id": "SIB_005",
+      "group": "Outstanding Dates",
+      "start_date": {
+         "year": "-3404"
+      },
+      "text": {
+         "headline": "Enoch's birth",
+         "details": "Gen 5:18<br>Birth of righteous Enoch"
+      }
+   },
+   {
+      "unique_id": "SIB_006",
+      "group": "Outstanding Dates",
+      "start_date": {
+         "year": "-3339"
+      },
+      "text": {
+         "headline": "Methuselah's birth",
+         "details": "Gen 5:21<br>Birth of Methuselah"
+      }
+   },
+   {
+      "unique_id": "SIB_007",
+      "group": "Outstanding Dates",
+      "start_date": {
+         "year": "-3152"
+      },
+      "text": {
+         "headline": "Lamech's birth",
+         "details": "Gen 5:25<br>Birth of Lamech"
+      }
+   },
+   {
+      "unique_id": "SIB_008",
+      "group": "Outstanding Dates",
+      "start_date": {
+         "year": "-3096"
+      },
+      "text": {
+         "headline": "Adam's death",
+         "details": "Gen 5:5<br>Death of Adam"
+      }
+   },
+   {
+      "unique_id": "SIB_009",
+      "group": "Outstanding Dates",
+      "start_date": {
+         "year": "-4026"
+      },
+      "text": {
+         "headline": "Enoch's transfer",
+         "details": "Gen 5:23, 24; Jude 14<br>Transference of Enoch. Ends his period of prophesying."
+      }
+   },
+   {
+      "unique_id": "SIB_010",
+      "group": "Outstanding Dates",
+      "start_date": {
+         "year": "-2970"
+      },
+      "text": {
+         "headline": "Noah's birth",
+         "details": "Gen 5:28, 29<br>Birth of Noah"
+      }
+   },
+   {
+      "unique_id": "SIB_011",
+      "group": "Outstanding Dates",
+      "start_date": {
+         "year": "-2490"
+      },
+      "text": {
+         "headline": "God's pronouncement of mankind",
+         "details": "Gen 6:3<br>God's pronouncement as to mankind"
+      }
+   },
+   {
+      "unique_id": "SIB_012",
+      "group": "Outstanding Dates",
+      "start_date": {
+         "year": "-2490"
+      },
+      "text": {
+         "headline": "Japheth's birth",
+         "details": "Gen 5:32; 9:24; 10:21<br>Birth of Japheth"
+      }
+   },
+   {
+      "unique_id": "SIB_013",
+      "group": "Outstanding Dates",
+      "start_date": {
+         "year": "-2490"
+      },
+      "text": {
+         "headline": "Shem's birth",
+         "details": "Gen 7:11; 11:10<br>Birth of Shem"
+      }
+   },
+   {
+      "unique_id": "SIB_014",
+      "group": "Outstanding Dates",
+      "start_date": {
+         "year": "-2370"
+      },
+      "text": {
+         "headline": "Methuselah's death",
+         "details": "Gen 5:27<br>Death of Methuselah"
+      }
+   },
+   {
+      "unique_id": "SIB_015",
+      "group": "Outstanding Dates",
+      "start_date": {
+         "year": "-2370"
+      },
+      "text": {
+         "headline": "Floodwaters fall",
+         "details": "Gen 7:6, 11<br>Floodwaters fall (in autumn)"
+      }
    }
 ];
 
