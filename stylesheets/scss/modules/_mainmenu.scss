@@ -14,8 +14,11 @@
    &--title {
       text-align: center;
       margin-top: 6px;
-
+      position: absolute;
+      left: 45%;
+      
       @include setDeviceStyle(phone) {
+         position: static;
          width: 100%;
          padding: 10px;
          border-bottom: 2px solid $ltgray;

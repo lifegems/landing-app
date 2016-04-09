@@ -30,7 +30,9 @@
    }
 
    &--content {
+      position: absolute;
       overflow: hidden;
+      top: 40px;
 
       min-height: 100vh;
       display: block;
