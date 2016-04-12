@@ -29,7 +29,8 @@ var DB = (function() {
       self.strAPIKey  = strAPIKey;
    }
 
-   DB.prototype.get = function(strURI, params = "") {
+   DB.prototype.get = function(strURI, params) {
+      params  = (!params) ? "" : params;
       var fullurl = self.strBaseURL + strURI + "?apiKey=" + self.strAPIKey + params;
       return $.ajax({
          url: fullurl,
