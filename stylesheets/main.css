@@ -2384,6 +2384,9 @@ a {
   text-align: center;
   line-height: 40px; }
 
+#biblebooksview {
+  height: 100%; }
+
 .book--heading {
   clear: both;
   padding-top: 30px;
