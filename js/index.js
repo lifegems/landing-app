@@ -35,7 +35,7 @@ var VC = (function() {
          case "reading":
             Menu.addActiveToPage("reading");
             $('.content').load("reading.html", function() {
-
+               var BBV = new BibleBooksView("#biblebooksview");
             });
             break;
          default:
