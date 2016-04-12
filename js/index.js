@@ -53,4 +53,6 @@ var VC = (function() {
    return VC;
 })();
 
-Main.construct();
+$(document).ready(function() {
+   Main.construct();
+});
