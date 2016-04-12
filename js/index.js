@@ -18,8 +18,13 @@ var VC = (function() {
    function VC() {
 
    }
+   
+   function hideLoader() {
+      $('.loader').hide();
+   }
 
    VC.loadPage = function(strPageName) {
+      $('.loader').show();
       Menu.removeActive();
       switch (strPageName) {
          case "error":
@@ -30,17 +35,21 @@ var VC = (function() {
             $('.content').load("timeline.html", function() {
                Timeline.loadTimeline();
                Timeline.loadEvents();
+               setTimeout(hideLoader, 1000);
             });
             break;
          case "reading":
             Menu.addActiveToPage("reading");
             $('.content').load("reading.html", function() {
                var BBV = new BibleBooksView("#biblebooksview");
+               setTimeout(hideLoader, 1000);
             });
             break;
          default:
             Menu.addActiveToPage("home");
-            $('.content').load("home.html");
+            $('.content').load("home.html", function() {
+               setTimeout(hideLoader, 1000);
+            });
             break;
       }
    }

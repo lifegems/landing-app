@@ -2366,15 +2366,6 @@ a {
   text-align: left;
   border-bottom: 2px solid #d9dad8; }
 
-.timebox {
-  height: 90%;
-  top: 10vh;
-  position: fixed;
-  width: 80%; }
-  @media screen and (max-width: 767px) {
-    .timebox {
-      width: 100%; } }
-
 .book--icon, .chapters--item {
   cursor: pointer;
   float: left;
@@ -2444,6 +2435,21 @@ a {
       width: 100%;
       margin: 60px 0px 0px 0px;
       overflow: scroll; } }
+
+.loader {
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: #7a7f79;
+  color: navy;
+  opacity: 0.3; }
+  .loader--spinner {
+    max-width: 50%; }
 
 .heading {
   text-align: center;
