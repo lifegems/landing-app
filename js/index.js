@@ -32,6 +32,12 @@ var VC = (function() {
                Timeline.loadEvents();
             });
             break;
+         case "reading":
+            Menu.addActiveToPage("reading");
+            $('.content').load("reading.html", function() {
+
+            });
+            break;
          default:
             Menu.addActiveToPage("home");
             $('.content').load("home.html");
