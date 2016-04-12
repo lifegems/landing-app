@@ -1,7 +1,8 @@
 var Timeline = (function Timeline() {
 
    var service = {
-      loadTimeline: loadTimeline
+      loadTimeline: loadTimeline,
+      loadEvents: loadEvents
    };
 
    var hasLoadedTL = false;
@@ -129,24 +130,27 @@ var Timeline = (function Timeline() {
    /**
     * EVENTS
     */
-   $(".details--expand").on('click', function(e) {
-      $('.toolbar--details').hide();
-   });
 
-   $(".events--save").click(function(e) {
-      aUserSettings = [];
-      var $settingsCkb = $('[id^="events--"]');
-      $.each($settingsCkb, function(_, d) {
-         var strEventType = $(d).attr('id').substr(8);
-
-         if ($(d).is(':checked') === true) {
-            aUserSettings.push(strEventType);
-         }
+   function loadEvents() {
+      $(".details--expand").on('click', function(e) {
+         $('.toolbar--details').hide();
       });
-      loadTimeline();
 
-      $('.toolbar--events').hide();
-   });
+      $(".events--save").click(function(e) {
+         aUserSettings = [];
+         var $settingsCkb = $('[id^="events--"]');
+         $.each($settingsCkb, function(_, d) {
+            var strEventType = $(d).attr('id').substr(8);
+
+            if ($(d).is(':checked') === true) {
+               aUserSettings.push(strEventType);
+            }
+         });
+         loadTimeline();
+
+         $('.toolbar--events').hide();
+      });
+   }
 
    return service;
 })();

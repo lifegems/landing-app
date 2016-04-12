@@ -7,6 +7,7 @@
       <title>Life Gems. God's word is alive.</title>
 
       <link rel="icon" type="image/png" href="assets/favicon.ico">
+      <link rel="stylesheet" type="text/css" href="stylesheets/scss/lib/timeline.css">
       <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -15,48 +16,16 @@
          <nav class="mainmenu">
             <h3 class="mainmenu--title">Life Gems</h3>
             <ul>
-               <a href="index.html"><li class="mainmenu--item is-active">Home</li></a>
-               <a href="timeline.html"><li class="mainmenu--item">Timeline</li></a>
-               <a href="#"><li class="mainmenu--item">Maps</li></a>
-               <a href="#"><li class="mainmenu--item">Plagues</li></a>
+               <a href="#home"><li class="mainmenu--item is-active">Home</li></a>
+               <a href="#timeline"><li class="mainmenu--item">Timeline</li></a>
+               <a href="#error"><li class="mainmenu--item">Maps</li></a>
+               <a href="https://lifegems.github.io/plagues"><li class="mainmenu--item">Plagues</li></a>
             </ul>
             <div class="mainmenu--expand"><i class="fa fa-bars"></i></div>
          </nav>
       </header>
 
-      <div class="content">
-
-         <h2 class="heading">Choose a gem</h2>
-
-         <div class="portfolio">
-            <table>
-               <tr>
-                  <th class="portfolio--item">
-                     <a href="https://lifegems.github.io/bible-timeline">
-                        <img class="portfolio--item--img" src="assets/img/timeline.png">
-                        <h3 class="portfolio--item--title">Bible Timeline</h3>
-                        <p class="portfolio--item--desc">A timeline including events, lifespans, prophecies, and more. See the relation between the contents of the bible.</p>
-                     </a>
-                  </th>
-                  <th class="portfolio--item">
-                     <a href="https://lifegems.github.io/plagues">
-                        <img class="portfolio--item--img" src="assets/img/plagues.png">
-                        <h3 class="portfolio--item--title">Plagues of Egypt</h3>
-                        <p class="portfolio--item--desc">Learn about the ten plagues of Egypt. See the gods that were defamed and who was involved.</p>
-                     </a>
-                  </th>
-                  <th class="portfolio--item">
-                     <a href="https://lifegems.github.io/offerings">
-                        <img class="portfolio--item--img" src="assets/img/aaron.png">
-                        <h3 class="portfolio--item--title">Temple Offerings</h3>
-                        <p class="portfolio--item--desc">Learn about the various kings of sacrifices that were made by the priests serving in the tabernacle.</p>
-                     </a>
-                  </th>
-               </tr>
-            </table>
-         </div>
-
-      </div>
+      <div class="content"></div>
 
       <footer>
          <p class="policy">Lifegems. Copyright (c) 2016</p>
@@ -64,6 +33,9 @@
 
       <!-- JS code -->
       <script src="js/lib/jquery-2.2.2.js"></script>
+      <script src="js/lib/timeline3.js"></script>
+
+      <script src="js/events.js"></script>
       <script src="js/timeline.js"></script>
       <script src="js/menu.js"></script>
       <script src="js/index.js"></script>
