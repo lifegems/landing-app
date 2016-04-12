@@ -2366,6 +2366,15 @@ a {
   text-align: left;
   border-bottom: 2px solid #d9dad8; }
 
+.timebox {
+  height: 90%;
+  top: 10vh;
+  position: fixed;
+  width: 80%; }
+  @media screen and (max-width: 767px) {
+    .timebox {
+      width: 100%; } }
+
 .book--icon, .chapters--item {
   cursor: pointer;
   float: left;
