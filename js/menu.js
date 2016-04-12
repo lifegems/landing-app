@@ -1,6 +1,8 @@
 var Menu = (function Menu(){
    var service = {
-      hideMenuOnDesktop: hideMenuOnDesktop
+      hideMenuOnDesktop: hideMenuOnDesktop,
+      removeActive: removeActive,
+      addActiveToPage: addActiveToPage
    };
 
    /**
@@ -10,6 +12,14 @@ var Menu = (function Menu(){
       if ( $('.mainmenu--expand').css('display') === 'block') {
          $(".mainmenu--item").addClass("is-hidden");
       }
+   }
+
+   function removeActive() {
+      $('[id^="menu--"]').removeClass("is-active");
+   }
+
+   function addActiveToPage(strPage) {
+      var $menuItem = $('#menu--' + strPage).addClass("is-active");
    }
 
    /**
