@@ -13,10 +13,13 @@ var BibleBooksView = (function() {
    }
 
    function saveChapters(aChapterIDs, blSave) {
-      DB.get("ReadingProgress", "&q={'user':'joshua'}").then(function(data) {
+      var qUser = "&q={'user':'" + VC.user + "'}";
+      DB.get("ReadingProgress", qUser).then(function(data) {
+         data = (data[0]) ? data : initUserData(VC.user);
          $.each(aChapterIDs, function(i, strChapterID) {
             var index = $.inArray(strChapterID, data[0].completed_chapters);
             if (blSave && index === -1) {
+               console.log(data);
                data[0].completed_chapters.push(strChapterID);
             } else if (!blSave && index !== -1) {
                data[0].completed_chapters.splice(index, 1);
@@ -99,6 +102,14 @@ var BibleBooksView = (function() {
       return color;
    }
 
+   function initUserData(strUserName) {
+      return [{
+         "user": strUserName,
+         "start_date": "20150610",
+         "completed_chapters": []
+      }];
+   }
+
    function displayAllBooks() {
       self.DB.get("BibleBooks", "&s={_id:1}").then(function(data) {
          $.each(data, function(i, d) {
@@ -141,10 +152,11 @@ var BibleBooksView = (function() {
             }
             $(self.strContainer).append($Book);
          });
-         DB.get("ReadingProgress", "&q={'user':'joshua'}").then(function(data) {
+         var qUser = "&q={'user':'" + VC.user + "'}";
+         DB.get("ReadingProgress", qUser).then(function(data) {
+            data = (data[0]) ? data : initUserData(VC.user);
             $.each(data[0].completed_chapters, function(_, strChapterID) {
                $('#' + strChapterID).addClass("chapters--complete");
-               console.log(strChapterID);
             });
          });
       });

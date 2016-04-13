@@ -19,6 +19,8 @@ var VC = (function() {
 
    }
 
+   VC.prototype.user = "";
+
    VC.loadPage = function(strPageName) {
       Menu.removeActive();
       switch (strPageName) {
@@ -59,4 +61,17 @@ var VC = (function() {
 
 $(document).ready(function() {
    Main.construct();
+   var user = localStorage.getItem('user');
+   $(".mainmenu--username").val(user);
+   VC.user = user;
+   $('.mainmenu--loginBtn').click(function(e) {
+      var strUserName = $(".mainmenu--username").val();
+      localStorage.setItem('user', strUserName);
+
+      $(".mainmenu--username").remove();
+      $(".mainmenu--loginBtn").remove();
+      var $username = $("<div></div>", {class: 'mainmenu--username'});
+      $username.text(strUserName);
+      $('.mainmenu--login').append($username);
+   });
 });

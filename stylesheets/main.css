@@ -2166,6 +2166,16 @@ a {
       font-weight: bold; }
     .mainmenu--item.is-hidden {
       display: none; }
+  .mainmenu--login {
+    margin: 0px;
+    display: block;
+    float: right;
+    height: 30px; }
+  .mainmenu--username {
+    height: 100%; }
+  .mainmenu--loginBtn {
+    height: 100%;
+    border: 0.5px solid #eae9e6; }
 
 .portfolio {
   border-collapse: collapse;
