@@ -55,7 +55,7 @@ var VC = (function() {
    }
 
    $(window).on('hashchange', function(e) {
-      Menu.hideMenuOnDesktop();
+      Menu.hideMenu();
       var strPage = window.location.hash.substr(1);
       VC.loadPage(strPage);
    });
