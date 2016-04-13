@@ -12,10 +12,10 @@
    }
 
    &--title {
+      float: left;
       text-align: center;
       margin-top: 6px;
-      position: absolute;
-      left: 45%;
+      width: 100%;
 
       @include setDeviceStyle(phone) {
          position: static;
@@ -96,12 +96,19 @@
       display: block;
       float: right;
       height: 30px;
+      background-color: $ltgray;
    }
    &--username {
+      border: 0.5px solid $ltgray;
+      text-align: center;
+      padding: 0px 5px;
       height: 100%;
+      float: right;
    }
    &--loginBtn {
+      padding: 5px;
       height: 100%;
+      float: right;
       border: 0.5px solid $ltgray;
    }
 }

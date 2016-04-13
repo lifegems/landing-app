@@ -71,7 +71,7 @@ $(document).ready(function() {
       $(".mainmenu--username").remove();
       $(".mainmenu--loginBtn").remove();
       var $username = $("<div></div>", {class: 'mainmenu--username'});
-      $username.text(strUserName);
+      $username.text("Logged in as " + strUserName);
       $('.mainmenu--login').append($username);
    });
 });
