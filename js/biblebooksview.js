@@ -9,16 +9,36 @@ var BibleBooksView = (function() {
          "CY73dQUZRrVfx3SWzj77PZ8QbCk-6ilZ"
       );
       displayAllBooks();
+
    }
 
-   function getChapterButton(strName) {
-      var $chapter = $('<div></div>', {class: "chapters--item"});
+   function saveChapters(aChapterIDs, blSave) {
+      DB.get("ReadingProgress", "&q={'user':'joshua'}").then(function(data) {
+         $.each(aChapterIDs, function(i, strChapterID) {
+            var index = $.inArray(strChapterID, data[0].completed_chapters);
+            if (blSave && index === -1) {
+               data[0].completed_chapters.push(strChapterID);
+            } else if (!blSave && index !== -1) {
+               data[0].completed_chapters.splice(index, 1);
+            }
+         });
+         DB.post("ReadingProgress", data[0]);
+      });
+   }
+
+   function getChapterButton(strName, intChapterID) {
+      var $chapter = $('<div></div>', {id: intChapterID, class: "chapters--item"});
       $chapter.text(strName);
       $chapter.click(function(e) {
-         if ($(this).hasClass("chapters--complete") === true) {
+         if ($(this).text() === "ALL") {
+            // swallow these events
+            console.log("");
+         } else if ($(this).hasClass("chapters--complete") === true) {
             $(this).removeClass("chapters--complete");
+            saveChapters([$(this).attr('id')], false);
          } else {
             $(this).addClass("chapters--complete");
+            saveChapters([$(this).attr('id')], true);
          }
       });
       return $chapter;
@@ -33,20 +53,34 @@ var BibleBooksView = (function() {
    function listChapters(intCount, strCode) {
       var $chapters = $('<div>', {class: 'chapters'});
       for (var i = 1; i <= intCount; i++) {
-         var $chapter = getChapterButton(i);
+         var $chapter = getChapterButton(i, strCode + i);
          $chapter.attr('data-group', strCode);
          $chapters.append($chapter);
       }
-      var $finish = getChapterButton("ALL");
+      var $finish = getChapterButton("ALL", strCode + "ALL");
       $finish.attr('data-group', strCode);
       $finish.attr('data-done', 'false');
       $finish.click(function(e) {
+         var $chapters = $('[data-group='+strCode+']');
+         var aChapters = [];
          if ($(this).attr('data-done') === 'true') {
             $(this).attr('data-done', 'false');
-            $('[data-group='+strCode+']').removeClass('chapters--complete');
+            $chapters.removeClass('chapters--complete');
+            $.each($chapters, function(i, chap) {
+               if ($chapters.length - 1 > i) {
+                  aChapters.push($(chap).attr('id'));
+               }
+            });
+            saveChapters(aChapters, false);
          } else {
             $(this).attr('data-done', 'true');
-            $('[data-group='+strCode+']').addClass('chapters--complete')
+            $('[data-group='+strCode+']').addClass('chapters--complete');
+            $.each($chapters, function(i, chap) {
+               if ($chapters.length - 1 > i) {
+                  aChapters.push($(chap).attr('id'));
+               }
+            });
+            saveChapters(aChapters, true);
          }
       });
       $chapters.append($finish);
@@ -106,6 +140,12 @@ var BibleBooksView = (function() {
                $(self.strContainer).append($grkHeading);
             }
             $(self.strContainer).append($Book);
+         });
+         DB.get("ReadingProgress", "&q={'user':'joshua'}").then(function(data) {
+            $.each(data[0].completed_chapters, function(_, strChapterID) {
+               $('#' + strChapterID).addClass("chapters--complete");
+               console.log(strChapterID);
+            });
          });
       });
    }
