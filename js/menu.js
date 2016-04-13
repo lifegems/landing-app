@@ -4,7 +4,8 @@ var Menu = (function Menu(){
       removeActive: removeActive,
       addActiveToPage: addActiveToPage,
       hideMenu: hideMenu,
-      openMenu: openMenu
+      openMenu: openMenu,
+      setTitle: setTitle
    };
 
    /**
@@ -20,16 +21,20 @@ var Menu = (function Menu(){
       $('[id^="menu--"]').removeClass("is-active");
    }
 
+   function setTitle(strTitle) {
+      $('.mainmenu--title').text(strTitle);
+   }
+
    function addActiveToPage(strPage) {
       var $menuItem = $('#menu--' + strPage).addClass("is-active");
    }
-   
+
    function hideMenu() {
       $('.mainmenu--expand').html("<i class='fa fa-bars'></i>");
       $(".mainmenu--item").addClass("is-hidden");
       isMenuExpanded = false;
    }
-   
+
    function openMenu() {
       $('.mainmenu--expand').html("<i class='fa fa-chevron-up'></i>");
       $(".mainmenu--item").removeClass("is-hidden");

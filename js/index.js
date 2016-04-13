@@ -18,44 +18,38 @@ var VC = (function() {
    function VC() {
 
    }
-   
-   function hideLoader() {
-      $('.loader').hide();
-   }
 
    VC.loadPage = function(strPageName) {
-      $('.loader').show();
       Menu.removeActive();
       switch (strPageName) {
          case "error":
+            Menu.setTitle("ERROR");
             $('.content').load("404.html");
             break;
          case "timeline":
+            Menu.setTitle("Bible Timeline");
             Menu.addActiveToPage("timeline");
             $('.content').load("timeline.html", function() {
                Timeline.loadTimeline();
                Timeline.loadEvents();
-               setTimeout(hideLoader, 1000);
             });
             break;
          case "reading":
+            Menu.setTitle("Daily Bible Reading");
             Menu.addActiveToPage("reading");
             $('.content').load("reading.html", function() {
                var BBV = new BibleBooksView("#biblebooksview");
-               setTimeout(hideLoader, 1000);
             });
             break;
          default:
+            Menu.setTitle("Choose a gem");
             Menu.addActiveToPage("home");
-            $('.content').load("home.html", function() {
-               setTimeout(hideLoader, 1000);
-            });
+            $('.content').load("home.html");
             break;
       }
    }
 
    $(window).on('hashchange', function(e) {
-      Menu.hideMenu();
       var strPage = window.location.hash.substr(1);
       VC.loadPage(strPage);
    });
