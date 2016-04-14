@@ -1,11 +1,19 @@
 %icon {
    cursor: pointer;
    float: left;
-   margin: 3px;
-   width: 40px;
-   height: 40px;
-   text-align: center;
-   line-height: 40px;
+   margin-bottom: 5px;
+   margin-right: 5px;
+   line-height: 3.5em;
+   text-indent: 25px;
+   width: 150px;
+   height: 50px;
+   text-align: left;
+   font-size: 0.9em;
+   
+   @include setDeviceStyle(phone) {
+      width: 50px;
+      text-indent: 10px;
+   }
 }
 
 #biblebooksview {
@@ -27,6 +35,17 @@
          color: #8a8abd;
          background-color: white;
          border-bottom: 3px solid #8a8abd;
+      }
+      &--short {
+         display: none;
+         @include setDeviceStyle(phone) {
+            display: inline;
+         }
+      }
+      &--long {
+         @include setDeviceStyle(phone) {
+            display: none;
+         }
       }
    }
 
@@ -56,6 +75,9 @@
    margin: 15px 0px;
    &--item {
       @extend %icon;
+      width: 50px;
+      text-indent: 0px;
+      text-align: center;
       background-color: white;
       border: 1px solid #8a8abd;
       color: #8a8abd;

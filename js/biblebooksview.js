@@ -114,7 +114,9 @@ var BibleBooksView = (function() {
       self.DB.get("BibleBooks", "&s={_id:1}").then(function(data) {
          $.each(data, function(i, d) {
             var $BkIcon = $("<div></div>", {id: d.BookCode, class: "book--icon"});
-            $BkIcon.text(d.BookCode);
+            var strShortName = "<span class='book--icon--short'>" + d.BookCode + "</span>";
+            var strLongName = "<span class='book--icon--long'>" + d.BookName + "</span>";
+            $BkIcon.html(strShortName + strLongName);
             var color = getIconColor(i);
             $BkIcon.css('background-color', color);
             $BkIcon.click(function(e) {
